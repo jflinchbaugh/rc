@@ -1,0 +1,16 @@
+[alias]
+	st = status
+    s = status
+	ffs = flow feature start
+	fff = flow feature finish
+	ffp = flow feature publish
+	graph = log --branches --tags --remotes \
+            --graph --notes --source --abbrev-commit
+    p = pull
+    co = checkout
+    b = branch
+    undo = reset --soft HEAD~1
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/jflinchbaugh/.gitignore_global
