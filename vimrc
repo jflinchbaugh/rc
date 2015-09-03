@@ -38,3 +38,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 " fire off ctrlp at start
 " autocmd VimEnter * CtrlPMixed
+
+" trim trailing whitespace on write
+autocmd BufWritePre * :%s/\s\+$//e
