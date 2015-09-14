@@ -25,7 +25,7 @@ set backspace=indent,eol,start
 
 " mark 80th column
 set cc=80
-hi ColorColumn ctermbg=DarkGrey guibg=DarkGrey
+hi ColorColumn ctermfg=White ctermbg=DarkGrey guifg=White guibg=DarkGrey
 
 map W :.,$!fold -w75 -s
 map E :%!expand -4
