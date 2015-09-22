@@ -23,9 +23,9 @@ set number
 set showmatch
 set backspace=indent,eol,start
 
-" mark 80th column
-set cc=80
-hi ColorColumn ctermfg=White ctermbg=DarkGrey guifg=White guibg=DarkGrey
+" mark 75th column
+set cc=75
+hi ColorColumn ctermfg=White ctermbg=DarkGray guifg=White guibg=DarkGray
 
 map W :.,$!fold -w75 -s
 map E :%!expand -4
@@ -34,6 +34,9 @@ map S :%s/\s\+$//
 " switch tabs
 map <c-Left> :tabp
 map <c-Right> :tabn
+map tp :tabp
+map tn :tabn
+map tt :tab sball
 
 " try to ignore class files in ctrlp
 let g:ctrlp_custom_ignore = '.*\.class'
@@ -47,3 +50,6 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 " trim trailing whitespace on write
 autocmd BufWritePre * :%s/\s\+$//e
+
+"bufdo tab split
+"tab sball
