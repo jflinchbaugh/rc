@@ -18,13 +18,23 @@ export JAVA_HOME
 mesg n
 
 function ss() { ssh -X -t $1 "screen -xR"; }
+function cdw() { cd "$HOME/workspace/$1"; }
+function f() { find . -not -path '*/\.*' -type f -iname "*$1*" | head ; }
+function fvi() { vi $(f $1); }
 alias g=git
-alias cdw="cd ~/workspace"
+alias cdns="cd '/Volumes/infotech/Software Development Office/IAM Managed Work/idmgmt_titles_depart_ext_org_cleanup'"
 alias java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
 alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/jflinchbaugh/.gvm/bin/gvm-init.sh" ]] && source "/Users/jflinchbaugh/.gvm/bin/gvm-init.sh"
+PERL_MB_OPT="--install_base \"/Users/jflinchbaugh/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/jflinchbaugh/perl5"; export PERL_MM_OPT;
 
-# show a ruler to help size terminal width
-columns.groovy
+cat << END
+         1         2         3         4         5         6         7         8
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+END
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/jflinchbaugh/.sdkman"
+[[ -s "/Users/jflinchbaugh/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jflinchbaugh/.sdkman/bin/sdkman-init.sh"
+
