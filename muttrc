@@ -1,0 +1,89 @@
+set narrow_tree = yes
+unset mbox
+set mbox_type=Maildir
+set editor = "vi +8"
+set mime_forward=ask-yes
+set markers = no
+set thorough_search = yes
+set arrow_cursor = yes
+set edit_headers = yes
+set confirmappend = no
+set dsn_notify="failure,delay"
+set fast_reply = yes
+set folder = "~/Maildir"
+set spoolfile = "~/Maildir"
+set mask = ""
+set header = yes
+set mark_old = no
+set pager_context = 1
+set pager_stop = yes
+set sig_on_top = yes
+set reverse_name = yes
+
+#set crypt_autosign = yes
+#set crypt_replysign = yes
+set crypt_verify_sig = yes
+
+set from = john@hjsoft.com
+set reverse_name
+
+reply-hook "~C user@geb.codehaus.org" my_hdr From: johnflinchbaugh@gmail.com
+
+alternates glynis@hjsoft.com john@hjsoft.com glynis@butterfly.hjsoft.com john@johnflinchbaugh.com lccphotos@hjsoft.com johnflinchbaugh@gmail.com
+
+save-hook '~A' '=.saved-messages'
+set postponed = "=.postponed"
+set record = "=.sent-mail"
+set sort = threads
+set sort_aux = date
+set ascii_chars = yes
+set tilde = yes
+bind index <up> previous-entry
+bind index <down> next-entry
+bind pager <up> previous-line
+bind pager <down> next-line
+charset-hook US-ASCII iso-8859-1
+charset-hook x-unknown    ISO-8859-1
+charset-hook windows-1250 CP1250
+charset-hook windows-1251 CP1251
+charset-hook windows-1252 CP1252
+charset-hook windows-1253 CP1253
+charset-hook windows-1254 CP1254
+charset-hook windows-1255 CP1255
+charset-hook windows-1256 CP1256
+charset-hook windows-1257 CP1257
+charset-hook windows-1258 CP1258
+mono header bold "^Subject:"
+set beep = no
+macro compose S "Fgpg --sign --armor --textmode --clearsign\ny"
+macro compose E "Fgpg --sign --encrypt --armor --textmode --clearsign\n"
+hdr_order date to from subject
+ignore *
+unignore Date: From: To: Cc: Subject:
+
+macro index S "h| sa-learn --spam\nhid"
+macro pager S "h| sa-learn --spam\nhd"
+macro index N "h| sa-learn --ham\nhis=.\n"
+macro pager N "h| sa-learn --ham\nhs=.\n"
+
+macro index B "| spamassassin --add-to-blacklist\n"
+macro pager B "| spamassassin --add-to-blacklist\n"
+macro index W "| spamassassin --add-to-whitelist\n"
+macro pager W "| spamassassin --add-to-whitelist\n"
+
+folder-hook =.sent-mail "set sort = date"
+folder-hook ! =.sent-mail "set sort = threads" 
+
+mailboxes =. =.inbox-facebook =.inbox-root =.inbox-lcc =.inbox-probably-spam =.inbox-postmaster
+color attachment default default
+color body default default .*
+color bold default default
+color header brightcyan default .*
+color header brightgreen default "^Subject:"
+color hdrdefault default default
+color index default default .*
+color normal default default
+color signature default default
+set alias_file = ~/.addressbook
+source ~/.addressbook
+set query_command = "abook --mutt-query"
