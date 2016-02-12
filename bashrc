@@ -17,7 +17,7 @@ export JAVA_HOME
 
 mesg n
 
-function ss() { ssh -X -t $1 "screen -xR"; }
+function ss() { ssh -X -t $1 "screen -xR || bash -l"; }
 function cdw() { cd "$HOME/workspace/$1"; }
 
 # a quick find or find and vi like ctrl-p gives me in vim
