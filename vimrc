@@ -44,6 +44,8 @@ let g:ctrlp_custom_ignore = '.*\.class'
 let g:ctrlp_map = '<c-t>'
 " launch ctrlp in mixed mode to show local files and recents, etc
 let g:ctrlp_cmd = 'CtrlPMixed'
+" only search file names
+let g:ctrlp_by_filename = 1
 
 " automatically launch ctrlp at start
 " autocmd VimEnter * CtrlPMixed
