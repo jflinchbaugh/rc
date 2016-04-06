@@ -24,6 +24,11 @@ function cdw() { cd "$HOME/workspace/$1"; }
 function f() { find . -not -path '*/\.*' -type f -iname "*$1*" | head ; }
 function fvi() { vi $(f $1); }
 
+if [ "$(uname)" = 'Linux' ]; then
+    alias open=exo-open
+    alias m=mutt
+fi
+
 alias g=git
 alias cdns="cd '/Volumes/infotech/Software Development Office/IAM Managed Work/idmgmt_titles_depart_ext_org_cleanup'"
 alias java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
