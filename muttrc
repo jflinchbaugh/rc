@@ -1,4 +1,6 @@
 set narrow_tree = yes
+# set implicit_autoview = yes
+auto_view text/html
 unset mbox
 set mbox_type=Maildir
 set editor = "vi +8"
@@ -61,10 +63,15 @@ hdr_order date to from subject
 ignore *
 unignore Date: From: To: Cc: Subject:
 
-macro index S "h| sa-learn --spam\nhid"
-macro pager S "h| sa-learn --spam\nhd"
-macro index N "h| sa-learn --ham\nhis=.\n"
-macro pager N "h| sa-learn --ham\nhs=.\n"
+#macro index S "h| sa-learn --spam\nhid"
+#macro pager S "h| sa-learn --spam\nhd"
+#macro index N "h| sa-learn --ham\nhis=.\n"
+#macro pager N "h| sa-learn --ham\nhs=.\n"
+
+macro index S "s=.mark-spam\n"
+macro pager S "s=.mark-spam\n"
+macro index N "C=.mark-ham\n"
+macro pager N "C=.mark-ham\n"
 
 macro index B "| spamassassin --add-to-blacklist\n"
 macro pager B "| spamassassin --add-to-blacklist\n"
@@ -74,7 +81,7 @@ macro pager W "| spamassassin --add-to-whitelist\n"
 folder-hook =.sent-mail "set sort = date"
 folder-hook ! =.sent-mail "set sort = threads" 
 
-mailboxes =. =.inbox-facebook =.inbox-root =.inbox-lcc =.inbox-probably-spam =.inbox-postmaster
+mailboxes =. =.inbox-facebook =.inbox-root =.inbox-lcc =.inbox-probably-spam =.inbox-postmaster =.mark-spam =.mark-ham
 color attachment default default
 color body default default .*
 color bold default default
