@@ -30,6 +30,7 @@ hi ColorColumn ctermfg=White ctermbg=DarkGray guifg=White guibg=DarkGray
 map W :.,$!fold -w75 -s
 map E :%!expand -4
 map S :%s/\s\+$//
+map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
 
 " switch tabs
 map <c-Left> :tabp
