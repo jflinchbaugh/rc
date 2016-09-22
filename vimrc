@@ -1,11 +1,15 @@
 " https://github.com/kien/ctrlp.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" https://github.com/nathanaelkane/vim-indent-guides
+set runtimepath^=~/.vim/bundle/vim-indent-guides
+
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
 " set gsp files to be treated like xml for matching
 au BufRead,BufNewFile *.gsp set filetype=xml
 
+colorscheme default
 filetype plugin on
 syntax on
 set background=dark
@@ -53,6 +57,10 @@ let g:ctrlp_by_filename = 1
 
 " trim trailing whitespace on write
 autocmd BufWritePre * :%s/\s\+$//e
+
+" indent guides
+let g:indent_guides_guide_size=1
+let g:indent_guides_enable_on_vim_startup = 1
 
 "bufdo tab split
 "tab sball
