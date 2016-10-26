@@ -29,7 +29,7 @@ set backspace=indent,eol,start
 
 " mark 75th column
 set cc=75
-hi ColorColumn ctermfg=White ctermbg=DarkGray guifg=White guibg=DarkGray
+hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
 map W :.,$!fold -w75 -s
 map E :%!expand -4
@@ -62,7 +62,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 let g:indent_guides_guide_size=1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=DarkGray
+hi IndentGuidesOdd  ctermbg=Gray
 hi IndentGuidesEven ctermbg=Gray
 
 "bufdo tab split
