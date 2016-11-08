@@ -7,7 +7,8 @@
 	ffp = flow feature publish
     ffc = flow feature checkout
 	graph = log --branches --tags --remotes \
-            --graph --notes --source --abbrev-commit
+            --graph --notes --source --abbrev-commit \
+            --decorate=full --stat
     p = pull
     co = checkout
     b = branch
