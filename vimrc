@@ -1,15 +1,26 @@
+execute pathogen#infect()
+
+" Plugins below are installde to bundle dir, but pathogen loads them now
 " https://github.com/kien/ctrlp.vim
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
+"
+" https://github.com/tpope/vim-fireplace.git
+" set runtimepath^=~/.vim/bundle/vim-fireplace
 
 " https://github.com/nathanaelkane/vim-indent-guides
-set runtimepath^=~/.vim/bundle/vim-indent-guides
+" set runtimepath^=~/.vim/bundle/vim-indent-guides
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
 " set gsp files to be treated like xml for matching
 au BufRead,BufNewFile *.gsp set filetype=xml
 
-colorscheme default
+if has("gui_running")
+    colorscheme macvim
+else
+    colorscheme default
+endif
+
 filetype plugin on
 syntax on
 set background=dark
@@ -67,3 +78,4 @@ hi IndentGuidesEven ctermbg=Gray
 
 "bufdo tab split
 "tab sball
+
