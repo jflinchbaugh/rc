@@ -1,17 +1,15 @@
+" Automatically manage plugins with pathogen
+" https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
-" Plugins below are installde to bundle dir, but pathogen loads them now
 " https://github.com/kien/ctrlp.vim
-" set runtimepath^=~/.vim/bundle/ctrlp.vim
-"
 " https://github.com/tpope/vim-fireplace.git
-" set runtimepath^=~/.vim/bundle/vim-fireplace
-
 " https://github.com/nathanaelkane/vim-indent-guides
-" set runtimepath^=~/.vim/bundle/vim-indent-guides
+" https://github.com/mileszs/ack.vim
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
+
 " set gsp files to be treated like xml for matching
 au BufRead,BufNewFile *.gsp set filetype=xml
 
@@ -46,6 +44,8 @@ map W :.,$!fold -w75 -s
 map E :%!expand -4
 map S :%s/\s\+$//
 map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
+map !a :Ack!
+map !af :AckFile!
 
 " switch tabs
 map <c-Left> :tabp
@@ -73,8 +73,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 let g:indent_guides_guide_size=1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=Gray
-hi IndentGuidesEven ctermbg=Gray
+hi IndentGuidesOdd  ctermbg=Blue
+hi IndentGuidesEven ctermbg=Blue
 
 "bufdo tab split
 "tab sball
