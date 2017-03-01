@@ -54,8 +54,9 @@ map tp :tabp
 map tn :tabn
 map tt :tab sball
 
-" try to ignore class files in ctrlp
-let g:ctrlp_custom_ignore = '.*\.class'
+
+" ignore files when searching
+set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class
 " launch ctrlp with ctrl-t, weirdo
 let g:ctrlp_map = '<c-t>'
 " launch ctrlp in mixed mode to show local files and recents, etc
