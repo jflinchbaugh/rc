@@ -41,11 +41,12 @@ set cc=75
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
 map W :.,$!fold -w75 -s
-map E :%!expand -4
+" map E :%!expand -4
+map E :retab
 map S :%s/\s\+$//
 map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
-map !a :Ack!
-map !af :AckFile!
+map !a :Ack! 
+map !af :AckFile! 
 
 " switch tabs
 map <c-Left> :tabp
@@ -68,7 +69,10 @@ let g:ctrlp_by_filename = 1
 " autocmd VimEnter * CtrlPMixed
 
 " trim trailing whitespace on write
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * if (index(['vim'], &ft) < 0) | :%s/\s\+$//e
+
+" retab automatically on write
+" autocmd BufWritePre * if (index(['make', 'vim'], &ft) < 0) | :retab
 
 " indent guides
 let g:indent_guides_guide_size=1
