@@ -6,6 +6,7 @@ execute pathogen#infect()
 " https://github.com/tpope/vim-fireplace.git
 " https://github.com/nathanaelkane/vim-indent-guides
 " https://github.com/mileszs/ack.vim
+" https://github.com/tpope/vim-surround
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
