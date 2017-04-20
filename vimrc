@@ -42,7 +42,6 @@ set cc=75
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
 map W :.,$!fold -w75 -s
-" map E :%!expand -4
 map E :retab
 map S :%s/\s\+$//
 map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
@@ -56,18 +55,8 @@ map tp :tabp
 map tn :tabn
 map tt :tab sball
 
-
 " ignore files when searching
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class
-" launch ctrlp with ctrl-t, weirdo
-let g:ctrlp_map = '<c-t>'
-" launch ctrlp in mixed mode to show local files and recents, etc
-let g:ctrlp_cmd = 'CtrlPMixed'
-" only search file names
-let g:ctrlp_by_filename = 1
-
-" automatically launch ctrlp at start
-" autocmd VimEnter * CtrlPMixed
 
 " trim trailing whitespace on write
 autocmd BufWritePre * if (index(['vim'], &ft) < 0) | :%s/\s\+$//e
@@ -82,6 +71,19 @@ let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=Blue
 hi IndentGuidesEven ctermbg=Blue
 
-"bufdo tab split
-"tab sball
+if executable('ag')
+    " Note we extract the column as well as the file and line number
+    " set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepprg=ag\ --vimgrep\ $*
+    set grepformat=%f:%l:%c%m
+endif
+
+map <c-T> :tabfind! **/*
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
+
+" navigate quickfix list from grep
+nmap <silent> <c-Down> :cnext<CR>
+nmap <silent> <c-Up> :cprev<CR>
 
