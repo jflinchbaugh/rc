@@ -2,10 +2,8 @@
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 
-" https://github.com/kien/ctrlp.vim
 " https://github.com/tpope/vim-fireplace.git
 " https://github.com/nathanaelkane/vim-indent-guides
-" https://github.com/mileszs/ack.vim
 " https://github.com/tpope/vim-surround
 
 " Matchit plugin
@@ -45,8 +43,6 @@ map W :.,$!fold -w75 -s
 map E :retab
 map S :%s/\s\+$//
 map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
-map !a :Ack! 
-map !af :AckFile! 
 
 " switch tabs
 map <c-Left> :tabp
@@ -78,7 +74,7 @@ if executable('ag')
     set grepformat=%f:%l:%c%m
 endif
 
-map <c-T> :tabfind! **/*
+map <c-T> :tabfind **/*
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
