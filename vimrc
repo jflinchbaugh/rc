@@ -23,17 +23,25 @@ syntax on
 set background=dark
 set nocompatible
 set binary
+
+" settings for indentation
 set autoindent
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+set shiftround " round off shifts to line up with tabstops
 set tabstop=4
 set nocindent
+
 set ruler
 set showmode
 set number
 set showmatch
 set backspace=indent,eol,start
+
+" I too like to live dangerously
+set nobackup
+set noswapfile " no more warnings about swap files
 
 " mark 75th column
 set cc=75
