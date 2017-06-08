@@ -94,3 +94,6 @@ nnoremap <c-G> :grep<SPACE>
 nmap <silent> <c-Down> :cnext<CR>
 nmap <silent> <c-Up> :cprev<CR>
 
+" quicker command mode
+map ; :
+
