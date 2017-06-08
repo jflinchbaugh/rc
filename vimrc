@@ -47,17 +47,17 @@ set noswapfile " no more warnings about swap files
 set cc=75
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
-map W :.,$!fold -w75 -s
-map E :retab
-map S :%s/\s\+$//
+map W :.,$!fold -w75 -s<CR>
+map E :retab<CR>
+map S :%s/\s\+$//<CR>
 map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
 
 " switch tabs
-map <c-Left> :tabp
-map <c-Right> :tabn
-map tp :tabp
-map tn :tabn
-map tt :tab sball
+map <c-Left> :tabp<CR>
+map <c-Right> :tabn<CR>
+map tp :tabp<CR>
+map tn :tabn<CR>
+map tt :tab sball<CR>
 
 " ignore files when searching
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class
