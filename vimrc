@@ -87,6 +87,9 @@ map <c-T> :tabfind **/*
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
 
+" Ctrl-G for grep
+nnoremap <c-G> :grep<SPACE>
+
 " navigate quickfix list from grep
 nmap <silent> <c-Down> :cnext<CR>
 nmap <silent> <c-Up> :cprev<CR>
