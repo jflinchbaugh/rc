@@ -97,3 +97,5 @@ nmap <silent> <c-Up> :cprev<CR>
 " quicker command mode
 map ; :
 
+" navigate across lists, params, etc
+map , /[,()\[\]:]<CR>
