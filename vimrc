@@ -102,3 +102,6 @@ map , /[,()\[\]:]<CR>
 
 " cut-n-paste to system clipboard by default
 set clipboard=unnamed
+
+" automatically open all buffers in new tabs
+tab sball
