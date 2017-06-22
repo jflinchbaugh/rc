@@ -17,4 +17,4 @@
 	default = simple
     followTags = true
 [core]
-	excludesfile = /Users/jflinchbaugh/.gitignore_global
+	excludesfile = ~/.gitignore_global
