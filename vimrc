@@ -3,9 +3,12 @@
 execute pathogen#infect()
 call pathogen#helptags()
 
-" https://github.com/tpope/vim-fireplace.git
+" https://github.com/tpope/vim-fireplace
 " https://github.com/nathanaelkane/vim-indent-guides
 " https://github.com/tpope/vim-surround
+" https://github.com/tpope/vim-sexp-mappings-for-regular-people
+" https://github.com/guns/vim-sexp
+" https://github.com/tpope/vim-repeat
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
