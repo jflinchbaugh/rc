@@ -1,6 +1,7 @@
 " Automatically manage plugins with pathogen
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
+call pathogen#helptags()
 
 " https://github.com/tpope/vim-fireplace.git
 " https://github.com/nathanaelkane/vim-indent-guides
