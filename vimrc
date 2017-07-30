@@ -37,7 +37,7 @@ set tabstop=4
 set nocindent
 
 " smaller indents in clojure
-autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=4
+autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 set ruler
 set showmode
