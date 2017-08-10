@@ -38,6 +38,7 @@ set nocindent
 
 " smaller indents in clojure
 autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType cucumber setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 set ruler
 set showmode
