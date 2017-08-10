@@ -51,9 +51,9 @@ set noswapfile " no more warnings about swap files
 set cc=75
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
-map W :.,$!fold -w75 -s<CR>
-map E :retab<CR>
-map S :%s/\s\+$//<CR>
+map !w :.,$!fold -w75 -s<CR>
+map !e :retab<CR>
+map !s :%s/\s\+$//<CR>
 map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
 
 " switch tabs
@@ -108,4 +108,4 @@ map , /[,()\[\]:]<CR>
 set clipboard=unnamed
 
 " allow word nav to stop at underscore
-set iskeyword-=_
+"set iskeyword-=_
