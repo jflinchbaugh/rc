@@ -70,7 +70,7 @@ map tt :tab sball<CR>
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class
 
 " trim trailing whitespace on write
-autocmd BufWritePre * if (index(['vim'], &ft) < 0) | :%s/\s\+$//e
+autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
 
 " retab automatically on write
 " autocmd BufWritePre * if (index(['make', 'vim'], &ft) < 0) | :retab
