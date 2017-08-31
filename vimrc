@@ -35,6 +35,7 @@ set shiftwidth=4
 set shiftround " round off shifts to line up with tabstops
 set tabstop=4
 set nocindent
+set textwidth=75
 
 " smaller indents in clojure
 autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
