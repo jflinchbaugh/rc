@@ -9,6 +9,7 @@ call pathogen#helptags()
 " https://github.com/tpope/vim-sexp-mappings-for-regular-people
 " https://github.com/guns/vim-sexp
 " https://github.com/tpope/vim-repeat
+" https://github.com/vim-scripts/VOoM - outliner for org mode
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
@@ -40,6 +41,9 @@ set textwidth=75
 " smaller indents in clojure
 autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType cucumber setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+au BufRead,BufNewFile *.org set filetype=org
+autocmd FileType org Voom org
 
 set ruler
 set showmode
