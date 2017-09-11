@@ -41,9 +41,6 @@ set textwidth=75
 autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType cucumber setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-au BufRead,BufNewFile *.org set filetype=org
-autocmd FileType org Voom org
-
 set ruler
 set showmode
 set number
