@@ -119,3 +119,5 @@ set clipboard=unnamed
 filetype plugin indent on
 au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
 au BufEnter *.org call org#SetOrgFileType()
+let g:org_todo_setup='NEW TODO NEXT WAIT | DONE ABANDONED'
+let g:org_emacs_autoconvert = 0
