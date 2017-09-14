@@ -9,7 +9,6 @@ call pathogen#helptags()
 " https://github.com/tpope/vim-sexp-mappings-for-regular-people
 " https://github.com/guns/vim-sexp
 " https://github.com/tpope/vim-repeat
-" https://github.com/hsitz/VimOrganizer
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
@@ -114,10 +113,3 @@ set clipboard=unnamed
 
 " allow word nav to stop at underscore
 "set iskeyword-=_
-
-" setup for VimOrganizer
-filetype plugin indent on
-au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
-au BufEnter *.org call org#SetOrgFileType()
-let g:org_todo_setup='NEW TODO NEXT WAIT | DONE ABANDONED'
-let g:org_emacs_autoconvert = 0
