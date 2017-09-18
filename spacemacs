@@ -331,4 +331,4 @@ you should place your code here."
 (setq org-todo-keywords
     '((sequence "NEW" "TODO" "NEXT" "WAIT" "|" "DONE" "ABANDONED")))
 
-
+(custom-set-variables '(frame-background-mode 'dark))
