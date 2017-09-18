@@ -9,7 +9,6 @@ call pathogen#helptags()
 " https://github.com/tpope/vim-sexp-mappings-for-regular-people
 " https://github.com/guns/vim-sexp
 " https://github.com/tpope/vim-repeat
-" https://github.com/hsitz/VimOrganizer
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
@@ -114,4 +113,3 @@ set clipboard=unnamed
 
 " allow word nav to stop at underscore
 "set iskeyword-=_
-
