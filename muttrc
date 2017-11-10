@@ -29,6 +29,8 @@ set crypt_verify_sig = yes
 set from = john@hjsoft.com
 set reverse_name
 
+my_hdr Bcc: johnflinchbaugh@gmail.com
+
 reply-hook "~C user@geb.codehaus.org" my_hdr From: johnflinchbaugh@gmail.com
 
 alternates glynis@hjsoft.com john@hjsoft.com glynis@butterfly.hjsoft.com john@johnflinchbaugh.com lccphotos@hjsoft.com johnflinchbaugh@gmail.com
@@ -70,8 +72,8 @@ unignore Date: From: To: Cc: Subject:
 
 macro index S "s=.mark-spam\n"
 macro pager S "s=.mark-spam\n"
-macro index N "C=.mark-ham\n"
-macro pager N "C=.mark-ham\n"
+macro index N "C=.mark-ham\ns=\n"
+macro pager N "C=.mark-ham\ns=\n"
 
 macro index B "| spamassassin --add-to-blacklist\n"
 macro pager B "| spamassassin --add-to-blacklist\n"
@@ -79,9 +81,9 @@ macro index W "| spamassassin --add-to-whitelist\n"
 macro pager W "| spamassassin --add-to-whitelist\n"
 
 folder-hook =.sent-mail "set sort = date"
-folder-hook ! =.sent-mail "set sort = threads" 
+folder-hook ! =.sent-mail "set sort = threads"
 
-mailboxes =. =.inbox-facebook =.inbox-root =.inbox-lcc =.inbox-probably-spam =.inbox-postmaster =.mark-spam =.mark-ham
+mailboxes =. =.inbox-root =.inbox-facebook =.inbox-geb =.inbox-lcc =.inbox-probably-spam =.inbox-postmaster =.mark-spam =.mark-ham
 color attachment default default
 color body default default .*
 color bold default default
