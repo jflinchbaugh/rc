@@ -9,6 +9,9 @@ call pathogen#helptags()
 " https://github.com/tpope/vim-sexp-mappings-for-regular-people
 " https://github.com/guns/vim-sexp
 " https://github.com/tpope/vim-repeat
+" https://github.com/junegunn/fzf.vim
+" /usr/local/opt/fzf
+" https://github.com/szw/vim-tags.git
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
@@ -68,7 +71,7 @@ map tn :tabn<CR>
 map tt :tab sball<CR>
 
 " ignore files when searching
-set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class
+set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class,tags
 
 " trim trailing whitespace on write
 autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
@@ -90,10 +93,11 @@ if executable('ag')
     set grepformat=%f:%l:%c%m
 endif
 
-map <c-T> :tabfind **/*
+" map <c-T> :tabfind **/*
+map <c-T> :tabedit<cr>:Files<cr>
 
 " bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR><CR>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
 
 " Ctrl-G for grep
 nnoremap <c-G> :grep<SPACE>
@@ -113,3 +117,4 @@ set clipboard=unnamed
 
 " allow word nav to stop at underscore
 "set iskeyword-=_
+
