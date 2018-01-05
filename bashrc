@@ -39,6 +39,11 @@ alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/
 PERL_MB_OPT="--install_base \"/Users/jflinchbaugh/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/jflinchbaugh/perl5"; export PERL_MM_OPT;
 
+# source in local changes that aren't shared
+if [ -f "$HOME/.bashrc_local" ]; then
+    . "$HOME/.bashrc_local"
+fi
+
 cat << END
          1         2         3         4         5         6         7         8
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
