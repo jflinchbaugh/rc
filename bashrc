@@ -12,9 +12,6 @@ VISUAL=vi
 EDITOR=vi
 export VISUAL EDITOR
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
-export JAVA_HOME
-
 mesg n
 
 function ss() { ssh -X -t $1 "screen -xR || bash -l"; }
