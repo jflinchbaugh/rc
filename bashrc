@@ -12,11 +12,6 @@ VISUAL=vi
 EDITOR=vi
 export VISUAL EDITOR
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
-#JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home
-#JAVA_HOME=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-export JAVA_HOME
-
 mesg n
 
 function ss() { ssh -X -t $1 "screen -xR || bash -l"; }
@@ -32,12 +27,11 @@ if [ "$(uname)" = 'Linux' ]; then
 fi
 
 alias g=git
-alias cdns="cd '/Volumes/infotech/Software Development Office/IAM Managed Work/idmgmt_titles_depart_ext_org_cleanup'"
-alias java7="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home"
-alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 
-PERL_MB_OPT="--install_base \"/Users/jflinchbaugh/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/jflinchbaugh/perl5"; export PERL_MM_OPT;
+# source in local changes that aren't shared
+if [ -f "$HOME/.bashrc_local" ]; then
+    . "$HOME/.bashrc_local"
+fi
 
 cat << END
          1         2         3         4         5         6         7         8
@@ -45,6 +39,6 @@ cat << END
 END
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/jflinchbaugh/.sdkman"
-[[ -s "/Users/jflinchbaugh/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jflinchbaugh/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
