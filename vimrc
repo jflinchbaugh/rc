@@ -55,7 +55,7 @@ set nobackup
 set noswapfile " no more warnings about swap files
 
 " mark 75th column
-set cc=75
+set cc=76
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
 map !w :.,$!fold -w75 -s<CR>
