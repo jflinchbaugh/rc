@@ -93,11 +93,12 @@ if executable('ag')
     set grepformat=%f:%l:%c%m
 endif
 
-" map <c-T> :tabfind **/*
 map <c-T> :tabedit<cr>:Files<cr>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
+map !k :tabfind **/<C-R><C-W>.*<CR>
 
 " Ctrl-G for grep
 nnoremap <c-G> :grep<SPACE>
