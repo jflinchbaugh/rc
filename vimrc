@@ -12,6 +12,7 @@ call pathogen#helptags()
 " https://github.com/junegunn/fzf.vim
 " /usr/local/opt/fzf
 " https://github.com/szw/vim-tags.git
+" https://github.com/tpope/vim-unimpaired
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
@@ -86,9 +87,10 @@ let g:indent_guides_auto_colors = 0
 hi IndentGuidesOdd  ctermbg=Blue
 hi IndentGuidesEven ctermbg=Blue
 
-if executable('ag')
-    " Note we extract the column as well as the file and line number
-    " set grepprg=ag\ --nogroup\ --nocolor\ --column
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ $*
+    set grepformat=%f:%l:%c%m
+elseif executable('ag')
     set grepprg=ag\ --vimgrep\ $*
     set grepformat=%f:%l:%c%m
 endif
