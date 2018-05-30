@@ -31,6 +31,11 @@ set background=dark
 set nocompatible
 set binary
 
+" enable spell checking
+set spell
+hi clear SpellBad
+hi SpellBad cterm=underline
+
 " settings for indentation
 set autoindent
 set expandtab
@@ -44,6 +49,7 @@ set textwidth=75
 " smaller indents in clojure
 autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType cucumber setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
 
 set ruler
 set showmode
@@ -76,6 +82,14 @@ set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class,tags
 
 " trim trailing whitespace on write
 autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
+
+" call Files automatically in new vim
+function FilesIfEmpty()
+    if @% == "" 
+        Files 
+    endif
+endfunction
+autocmd VimEnter * call FilesIfEmpty()
 
 " retab automatically on write
 " autocmd BufWritePre * if (index(['make', 'vim'], &ft) < 0) | :retab
@@ -121,3 +135,5 @@ set clipboard=unnamed
 " allow word nav to stop at underscore
 "set iskeyword-=_
 
+" quick exit from insert mode
+inoremap jj <ESC>
