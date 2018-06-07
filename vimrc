@@ -77,6 +77,11 @@ map tp :tabp<CR>
 map tn :tabn<CR>
 map tt :tab sball<CR>
 
+" highlight selected tab
+hi TabLineFill ctermfg=Black ctermbg=White
+hi TabLineSel ctermfg=Black ctermbg=Yellow
+hi TabLine ctermfg=White ctermbg=Black
+
 " ignore files when searching
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class,tags
 
