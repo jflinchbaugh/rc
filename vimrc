@@ -90,7 +90,7 @@ autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
 
 " call Files automatically in new vim
 function FilesIfEmpty()
-    if @% == "" 
+    if @% == "" && executable('fzf')
         Files 
     endif
 endfunction
