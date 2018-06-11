@@ -29,7 +29,7 @@ set crypt_verify_sig = yes
 set from = john@hjsoft.com
 set reverse_name
 
-my_hdr Bcc: johnflinchbaugh@gmail.com
+my_hdr Bcc: johnflinchbaugh@gmail.com,john@hjsoft.com
 
 reply-hook "~C user@geb.codehaus.org" \
     my_hdr From: johnflinchbaugh@gmail.com
