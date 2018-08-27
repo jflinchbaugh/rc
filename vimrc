@@ -50,7 +50,6 @@ set textwidth=75
 autocmd FileType clojure setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType cucumber setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
-
 set ruler
 set showmode
 set number
@@ -142,3 +141,8 @@ set clipboard=unnamed
 
 " quick exit from insert mode
 inoremap jj <ESC>
+
+hi CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+set cursorline
+nnoremap <Leader>c :set cursorline!<CR>
