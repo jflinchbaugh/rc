@@ -17,6 +17,11 @@ call pathogen#helptags()
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
 
+let mapleader = " "
+
+" quicker command mode
+map ; :
+
 " set gsp files to be treated like xml for matching
 au BufRead,BufNewFile *.gsp set filetype=xml
 
@@ -64,10 +69,11 @@ set noswapfile " no more warnings about swap files
 set cc=76
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
-map !w :.,$!fold -w75 -s<CR>
-map !e :retab<CR>
-map !s :%s/\s\+$//<CR>
-map !dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
+map <Leader>w :.,$!fold -w75 -s<CR>
+map <Leader>e :retab<CR>
+map <Leader>s :%s/\s\+$//<CR>
+map <Leader>dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
+
 
 " switch tabs
 map <c-Left> :tabp<CR>
@@ -114,21 +120,19 @@ elseif executable('ag')
 endif
 
 map <c-T> :tabedit<cr>:Files<cr>
+map <Leader>t :tabedit<cr>:Files<cr>
+map <Leader>o :Files<cr>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
-map !k :tabfind **/<C-R><C-W>.*<CR>
+map <Leader>k :tabfind **/<C-R><C-W>.*<CR>
 
 " Ctrl-G for grep
-nnoremap <c-G> :grep<SPACE>
+nnoremap <Leader>g :grep<SPACE>
 
 " navigate quickfix list from grep
 nmap <silent> <c-Down> :cnext<CR>
 nmap <silent> <c-Up> :cprev<CR>
-
-" quicker command mode
-map ; :
 
 " navigate across lists, params, etc
 map , /[,()\[\]:]<CR>
