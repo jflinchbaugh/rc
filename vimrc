@@ -31,10 +31,11 @@ else
     colorscheme default
 endif
 
-syntax on
 set background=dark
 set nocompatible
 set binary
+
+syntax on
 
 " enable spell checking
 set spell
@@ -96,7 +97,7 @@ autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
 " call Files automatically in new vim
 function FilesIfEmpty()
     if @% == "" && executable('fzf')
-        Files 
+        Files
     endif
 endfunction
 autocmd VimEnter * call FilesIfEmpty()
@@ -146,7 +147,7 @@ set clipboard=unnamed
 " quick exit from insert mode
 inoremap jj <ESC>
 
-hi CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
-hi CursorColumn cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+hi CursorLine   cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+hi CursorColumn cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
 set cursorline
 nnoremap <Leader>c :set cursorline!<CR>
