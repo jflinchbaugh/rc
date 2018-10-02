@@ -70,11 +70,14 @@ set noswapfile " no more warnings about swap files
 set cc=76
 hi ColorColumn ctermfg=White ctermbg=Red guifg=White guibg=Red
 
+" wrap the whole file
 map <Leader>w :.,$!fold -w75 -s<CR>
+" expand tabs
 map <Leader>e :retab<CR>
+" trim trailing spaces
 map <Leader>s :%s/\s\+$//<CR>
+" date header
 map <Leader>dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
-
 
 " switch tabs
 map <c-Left> :tabp<CR>
@@ -100,7 +103,7 @@ function FilesIfEmpty()
         Files
     endif
 endfunction
-autocmd VimEnter * call FilesIfEmpty()
+" autocmd VimEnter * call FilesIfEmpty()
 
 " retab automatically on write
 " autocmd BufWritePre * if (index(['make', 'vim'], &ft) < 0) | :retab
@@ -121,7 +124,9 @@ elseif executable('ag')
 endif
 
 map <c-T> :tabedit<cr>:Files<cr>
-map <Leader>t :tabedit<cr>:Files<cr>
+" new tab
+map <Leader>t :tabedit<cr>
+" open file with fzf
 map <Leader>o :Files<cr>
 
 " bind K to grep word under cursor
