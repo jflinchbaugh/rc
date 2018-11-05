@@ -78,6 +78,12 @@ map <Leader>e :retab<CR>
 map <Leader>s :%s/\s\+$//<CR>
 " date header
 map <Leader>dh :.!date +\%Y-\%m-\%d<enter>o==========<esc>
+" upper/lower current word
+map <Leader>u gUiw
+map <Leader>l guiw
+" change surrounding quotes
+map <Leader>' cs"'
+map <Leader>" cs'"
 
 " switch tabs
 map <c-Left> :tabp<CR>
