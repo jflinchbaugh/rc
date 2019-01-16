@@ -1,5 +1,3 @@
-#!/bin/bash
-
 set -o vi
 
 PS1="\u@\h:\w\$ "
@@ -14,7 +12,7 @@ export VISUAL EDITOR
 
 mesg n
 
-function ss() { ssh -X -t $1 "screen -xR || bash -l"; }
+function ss() { ssh -X -t $1 "tmux attach || tmux || screen -xR || bash -l"; }
 function cdw() { cd "$HOME/workspace/$1"; }
 
 # a quick find or find and vi like ctrl-p gives me in vim
@@ -27,6 +25,7 @@ if [ "$(uname)" = 'Linux' ]; then
 fi
 
 alias g=git
+alias gs='git status'
 
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
@@ -37,8 +36,4 @@ cat << END
          1         2         3         4         5         6         7         8
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
 END
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
