@@ -103,14 +103,6 @@ set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip,*.class,tags
 " trim trailing whitespace on write
 autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
 
-" call Files automatically in new vim
-function FilesIfEmpty()
-    if @% == "" && executable('fzf')
-        Files
-    endif
-endfunction
-" autocmd VimEnter * call FilesIfEmpty()
-
 " retab automatically on write
 " autocmd BufWritePre * if (index(['make', 'vim'], &ft) < 0) | :retab
 
@@ -129,11 +121,11 @@ elseif executable('ag')
     set grepformat=%f:%l:%c%m
 endif
 
-map <c-T> :tabedit<cr>:Files<cr>
 " new tab
 map <Leader>t :tabedit<cr>
 " open file with fzf
-map <Leader>o :Files<cr>
+" map <Leader>o :Files<cr>
+map <Leader>o :e **/
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
@@ -150,7 +142,7 @@ nmap <silent> <c-Up> :cprev<CR>
 map , /[,()\[\]:]<CR>
 
 " cut-n-paste to system clipboard by default
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " allow word nav to stop at underscore
 "set iskeyword-=_
