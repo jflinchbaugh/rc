@@ -2,6 +2,7 @@
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 call pathogen#helptags()
+            
 
 " https://github.com/tpope/vim-fireplace
 " https://github.com/nathanaelkane/vim-indent-guides
@@ -110,8 +111,8 @@ autocmd BufWritePre * if (index(['markdown', 'vim'], &ft) < 0) | :%s/\s\+$//e
 let g:indent_guides_guide_size=1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-hi IndentGuidesOdd  ctermbg=Blue
-hi IndentGuidesEven ctermbg=Blue
+hi IndentGuidesOdd  ctermbg=DarkBlue
+hi IndentGuidesEven ctermbg=DarkBlue
 
 if executable('rg')
     set grepprg=rg\ --vimgrep\ $*
@@ -125,7 +126,7 @@ endif
 map <Leader>t :tabedit<cr>
 " open file with fzf
 " map <Leader>o :Files<cr>
-map <Leader>o :e **/
+map <Leader>o :e **/*
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
