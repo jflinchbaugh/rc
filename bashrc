@@ -3,7 +3,7 @@ set -o vi
 PS1="\u@\h:\w\$ "
 export PS1
 
-PATH="$HOME/bin:$PATH"
+PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
 export PATH
 
 VISUAL=vi
