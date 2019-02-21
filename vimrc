@@ -2,7 +2,6 @@
 " https://github.com/tpope/vim-pathogen
 execute pathogen#infect()
 call pathogen#helptags()
-            
 
 " https://github.com/tpope/vim-fireplace
 " https://github.com/nathanaelkane/vim-indent-guides
@@ -17,6 +16,9 @@ call pathogen#helptags()
 
 " Matchit plugin
 " http://www.vim.org/scripts/script.php?script_id=39
+
+set path+=**
+set wildmenu
 
 let mapleader = " "
 
@@ -127,7 +129,7 @@ endif
 map <Leader>t :tabedit<cr>
 " open file with fzf
 " map <Leader>o :Files<cr>
-map <Leader>o :e **/*
+map <Leader>o :find *
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR><CR>:cw<CR>
@@ -156,3 +158,5 @@ hi CursorLine   cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgree
 hi CursorColumn cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
 set cursorline
 nnoremap <Leader>c :set cursorline!<CR>
+
+command! MakeTags !ctags -R .
