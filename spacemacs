@@ -325,6 +325,11 @@ you should place your code here."
   (setq org-tags-column 0)
   (setq org-default-notes-file "~/OrgMode/GTD.org")
   (setq vc-follow-symlinks nil)
+  (setq org-capture-templates
+        '(
+          ("n" "New Note" entry (file "~/OrgMode/GTD.org")
+           "* NEW %?\n  %i\n  %a"))
+        )
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
