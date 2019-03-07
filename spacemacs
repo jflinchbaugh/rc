@@ -324,7 +324,7 @@ you should place your code here."
         '((sequence "NEW" "TODO" "NEXT" "WAIT" "|" "DONE" "ABANDONED")))
   (setq org-tags-column 0)
   (setq org-default-notes-file "~/OrgMode/GTD.org")
-
+  (setq vc-follow-symlinks nil)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
