@@ -64,7 +64,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   ;; dotspacemacs-excluded-packages '(org-projectile)
+   dotspacemacs-excluded-packages '(org-projectile)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -319,6 +319,7 @@ you should place your code here."
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-highlight-long-lines-globally-on)
   (setq command-log-mode-open-log-turns-on-mode t)
+  (setq command-log-mode-is-global t)
   (setq org-todo-keywords
         '((sequence "NEW" "TODO" "NEXT" "WAIT" "|" "DONE" "ABANDONED")))
   (setq org-tags-column 0)
