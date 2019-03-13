@@ -334,6 +334,9 @@ you should place your code here."
 
   (spacemacs/set-leader-keys (kbd "bl") 'clm/toggle-command-log-buffer)
 
+  ;; :q should kill the current buffer rather than quitting emacs entirely
+  (evil-ex-define-cmd "q" 'kill-this-buffer)
+
   ;; Do not write anything past this comment. This is where Emacs will
   ;; auto-generate custom variable definitions.
   (custom-set-variables
