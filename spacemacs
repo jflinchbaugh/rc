@@ -319,6 +319,7 @@ you should place your code here."
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-highlight-long-lines-globally-on)
   (spacemacs/toggle-highlight-current-line-globally-off)
+
   (setq clojure-indent-style 'always-indent)
   (setq command-log-mode-open-log-turns-on-mode t)
   (setq command-log-mode-is-global t)
@@ -332,6 +333,9 @@ you should place your code here."
           ("n" "New Note" entry (file "~/OrgMode/GTD.org")
            "* NEW %?\n  %i\n  %a"))
         )
+
+  (unless (display-graphic-p)
+    (setq linum-format "%d "))
 
   (spacemacs/set-leader-keys (kbd "bl") 'clm/toggle-command-log-buffer)
 
