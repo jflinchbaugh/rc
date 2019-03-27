@@ -320,6 +320,7 @@ you should place your code here."
   (spacemacs/toggle-highlight-long-lines-globally-on)
   (spacemacs/toggle-highlight-current-line-globally-off)
 
+  (setq git-commit-summary-max-length 40)
   (setq clojure-indent-style 'always-indent)
   (setq command-log-mode-open-log-turns-on-mode t)
   (setq command-log-mode-is-global t)
