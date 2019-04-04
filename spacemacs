@@ -338,6 +338,9 @@ you should place your code here."
   (unless (display-graphic-p)
     (setq linum-format "%d "))
 
+  (with-eval-after-load 'cider
+    (setq cider-repl-pop-to-buffer-on-connect t))
+
   (spacemacs/set-leader-keys (kbd "bl") 'clm/toggle-command-log-buffer)
 
   ;; :q should kill the current buffer rather than quitting emacs entirely
