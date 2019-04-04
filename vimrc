@@ -154,9 +154,9 @@ set clipboard=unnamedplus
 " quick exit from insert mode
 inoremap jj <ESC>
 
-hi CursorLine   cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
-hi CursorColumn cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
-set cursorline
+" hi CursorLine   cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+" hi CursorColumn cterm=underline " ctermbg=darkgreen ctermfg=white guibg=darkgreen guifg=white
+" set cursorline
 nnoremap <Leader>c :set cursorline!<CR>
 
 command! MakeTags !ctags -R .
