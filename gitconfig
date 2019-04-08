@@ -1,23 +1,23 @@
 [alias]
-	st = status
+    st = status
     s = status
     ff = flow feature
-	ffs = flow feature start
-	fff = flow feature finish
-	ffp = flow feature publish
+    ffs = flow feature start
+    fff = flow feature finish
+    ffp = flow feature publish
     ffc = flow feature checkout
-	graph = log --branches --tags --remotes \
+    graph = log --branches --tags --remotes \
             --graph --notes --source --abbrev-commit \
-            --decorate=full --stat
+            --decorate=full --stat --show-signature
     p = pull
     co = checkout
     b = branch
     undo = reset --soft HEAD~1
 [push]
-	default = simple
+    default = simple
     followTags = true
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [user]
-	name = John Flinchbaugh
-	email = john@hjsoft.com
+    name = John Flinchbaugh
+    email = john@hjsoft.com

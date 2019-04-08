@@ -13,11 +13,6 @@ export VISUAL EDITOR
 mesg n
 
 function ss() { ssh -X -t $1 "tmux attach || tmux || screen -xR || bash -l"; }
-function cdw() { cd "$HOME/workspace/$1"; }
-
-# a quick find or find and vi like ctrl-p gives me in vim
-function f() { find . -not -path '*/\.*' -type f -iname "*$1*" | head ; }
-function fvi() { vi $(f $1); }
 
 if [ "$(uname)" = 'Linux' ]; then
     alias open=exo-open
@@ -26,6 +21,8 @@ fi
 
 alias g=git
 alias gs='git status'
+alias d=docker
+alias vi='echo "no"'
 
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
