@@ -336,7 +336,7 @@ you should place your code here."
         )
 
   (unless (display-graphic-p)
-    (setq linum-format "%d "))
+    (setq linum-format "%d  "))
 
   (with-eval-after-load 'cider
     (setq cider-repl-pop-to-buffer-on-connect t))
