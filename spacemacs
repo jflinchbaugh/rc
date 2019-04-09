@@ -329,6 +329,9 @@ you should place your code here."
   (setq org-tags-column 0)
   (setq org-default-notes-file "~/OrgMode/GTD.org")
   (setq vc-follow-symlinks t)
+
+  ;; use the system clipboard
+  (setq x-select-enable-clipboard t)
   (setq org-capture-templates
         '(
           ("n" "New Note" entry (file "~/OrgMode/GTD.org")
