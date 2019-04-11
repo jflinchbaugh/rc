@@ -346,12 +346,16 @@ you should place your code here."
     (setq cider-repl-pop-to-buffer-on-connect t)
 
     ;; key to eval to comment in cider
-    (spacemacs/set-leader-keys (kbd "mec") 'cider-pprint-eval-last-sexp-to-comment)
-    (define-key evil-normal-state-map (kbd ",ec") 'cider-pprint-eval-last-sexp-to-comment)
+    (spacemacs/set-leader-keys (kbd "mec")
+      'cider-pprint-eval-last-sexp-to-comment)
+    (define-key evil-normal-state-map (kbd ",ec")
+      'cider-pprint-eval-last-sexp-to-comment)
 
     ;; key to interrupt cider
-    (spacemacs/set-leader-keys (kbd "mi") 'cider-pprint-eval-last-sexp-to-comment)
-    (define-key evil-normal-state-map (kbd ",i") 'cider-interrupt)
+    (spacemacs/set-leader-keys (kbd "mi")
+      'cider-pprint-eval-last-sexp-to-comment)
+    (define-key evil-normal-state-map (kbd ",i")
+      'cider-interrupt)
     )
 
   ;; key to open command log buffer
