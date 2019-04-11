@@ -338,12 +338,23 @@ you should place your code here."
            "* NEW %?\n  %i\n  %a"))
         )
 
-  (unless (display-graphic-p)
-    (setq linum-format "%d  "))
+  ;;(unless (display-graphic-p)
+  (setq linum-format " %4d ")
+  ; )
 
   (with-eval-after-load 'cider
-    (setq cider-repl-pop-to-buffer-on-connect t))
+    (setq cider-repl-pop-to-buffer-on-connect t)
 
+    ;; key to eval to comment in cider
+    (spacemacs/set-leader-keys (kbd "mec") 'cider-pprint-eval-last-sexp-to-comment)
+    (define-key evil-normal-state-map (kbd ",ec") 'cider-pprint-eval-last-sexp-to-comment)
+
+    ;; key to interrupt cider
+    (spacemacs/set-leader-keys (kbd "mi") 'cider-pprint-eval-last-sexp-to-comment)
+    (define-key evil-normal-state-map (kbd ",i") 'cider-interrupt)
+    )
+
+  ;; key to open command log buffer
   (spacemacs/set-leader-keys (kbd "bl") 'clm/toggle-command-log-buffer)
 
   ;; :q should kill the current buffer rather than quitting emacs entirely
