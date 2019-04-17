@@ -22,7 +22,7 @@ fi
 alias g=git
 alias gs='git status'
 alias d=docker
-alias vi='echo "no"'
+alias ec='emacsclient -a "" -nw -c'
 
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
