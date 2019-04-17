@@ -1,6 +1,6 @@
 set -o vi
 
-PS1="\u@\h:\w\$ "
+PS1="\u@\h:\w\n\$ "
 export PS1
 
 PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
