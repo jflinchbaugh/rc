@@ -266,7 +266,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers t
+   dotspacemacs-line-numbers nil 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -315,6 +315,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
                                                 :weight normal
                                                 :width normal
                                                 :powerline-scale 1.1)))
+  (global-display-line-numbers-mode)
   )
 
 (defun dotspacemacs/user-config ()
@@ -346,10 +347,6 @@ you should place your code here."
           ("n" "New Note" entry (file "~/OrgMode/GTD.org")
            "* NEW %?\n  %i\n  %a"))
         )
-
-  ;;(unless (display-graphic-p)
-  (setq linum-format " %4d ")
-  ; )
 
   (with-eval-after-load 'cider
     (setq cider-repl-pop-to-buffer-on-connect t)
