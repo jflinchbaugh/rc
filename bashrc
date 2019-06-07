@@ -6,7 +6,11 @@ export PS1
 PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
 export PATH
 
-VISUAL=$HOME/bin/ec
+if [ -x $HOME/bin/ec ]; then
+    VISUAL=$HOME/bin/ec
+else
+    VISUAL=vi
+fi
 EDITOR=$VISUAL
 export VISUAL EDITOR
 
