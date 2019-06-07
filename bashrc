@@ -6,8 +6,8 @@ export PS1
 PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
 export PATH
 
-VISUAL=vi
-EDITOR=vi
+VISUAL=$HOME/bin/ec
+EDITOR=$VISUAL
 export VISUAL EDITOR
 
 mesg n
@@ -22,7 +22,6 @@ fi
 alias g=git
 alias gs='git status'
 alias d=docker
-alias ec='emacsclient -a "" -nw -c'
 
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
