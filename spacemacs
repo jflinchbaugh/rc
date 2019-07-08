@@ -72,7 +72,7 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(helm-rg command-log-mode yasnippet-snippets)
+   dotspacemacs-additional-packages '(helm-rg command-log-mode)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
@@ -184,6 +184,11 @@ It should only modify the values of Spacemacs settings."
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
 
+   ;; Default major mode for a new empty buffer. Possible values are mode
+   ;; names such as `text-mode'; and `nil' to use Fundamental mode.
+   ;; (default `text-mode')
+   dotspacemacs-new-empty-buffer-major-mode 'text-mode
+
    ;; Default major mode of the scratch buffer (default `text-mode')
    dotspacemacs-scratch-mode 'text-mode
 
@@ -256,7 +261,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil then the last auto saved layouts are resumed automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts t
+   dotspacemacs-auto-resume-layouts nil
 
    ;; If non-nil, auto-generate layout name when creating new layouts. Only has
    ;; effect when using the "jump to layout by number" commands. (default nil)
@@ -316,6 +321,11 @@ It should only modify the values of Spacemacs settings."
    ;; (default nil) (Emacs 24.4+ only)
    dotspacemacs-maximized-at-startup t
 
+   ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
+   ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
+   ;; borderless fullscreen. (default nil)
+   dotspacemacs-undecorated-at-startup nil
+
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -343,10 +353,14 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-smooth-scrolling t
 
    ;; Control line numbers activation.
-   ;; If set to `t' or `relative' line numbers are turned on in all `prog-mode' and
-   ;; `text-mode' derivatives. If set to `relative', line numbers are relative.
+   ;; If set to `t', `relative' or `visual' then line numbers are enabled in all
+   ;; `prog-mode' and `text-mode' derivatives. If set to `relative', line
+   ;; numbers are relative. If set to `visual', line numbers are also relative,
+   ;; but lines are only visual lines are counted. For example, folded lines
+   ;; will not be counted and wrapped lines are counted as multiple lines.
    ;; This variable can also be set to a property list for finer control:
    ;; '(:relative nil
+   ;;   :visual nil
    ;;   :disabled-for-modes dired-mode
    ;;                       doc-view-mode
    ;;                       markdown-mode
@@ -354,6 +368,7 @@ It should only modify the values of Spacemacs settings."
    ;;                       pdf-view-mode
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
+   ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
    dotspacemacs-line-numbers t
 
@@ -363,7 +378,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil `smartparens-strict-mode' will be enabled in programming modes.
    ;; (default nil)
-   dotspacemacs-smartparens-strict-mode t
+   dotspacemacs-smartparens-strict-mode nil
 
    ;; If non-nil pressing the closing parenthesis `)' key in insert mode passes
    ;; over any automatically added closing parenthesis, bracket, quote, etc…
@@ -442,13 +457,6 @@ variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
 See the header of this file for more information."
   (spacemacs/load-spacemacs-env))
 
-(defun dotspacemacs/user-load ()
-  "Library to load while dumping.
-This function is called only while dumping Spacemacs configuration. You can
-`require' or `load' the libraries of your choice that will be included in the
-dump."
-  )
-
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
@@ -464,13 +472,19 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
                                                 :width normal)))
   )
 
+(defun dotspacemacs/user-load ()
+  "Library to load while dumping.
+This function is called only while dumping Spacemacs configuration. You can
+`require' or `load' the libraries of your choice that will be included in the
+dump."
+  )
+
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
+  "Configuration for user code:
+This function is called at the very end of Spacemacs startup, after layer
+configuration.
+Put your configuration code here, except for variables that should be set
+before packages are loaded."
 
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-highlight-long-lines-globally-on)
@@ -530,3 +544,23 @@ you should place your code here."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (nodejs-repl company-emacs-eclim eclim vimrc-mode dactyl-mode yasnippet-snippets yaml-mode ws-butler winum which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox orgit org-present org-pomodoro org-mime org-download org-bullets open-junk-file neotree mwim move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode linum-relative link-hint json-mode js2-refactor js-doc indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-rg helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu elisp-slime-nav dumb-jump diminish diff-hl define-word csv-mode company-tern company-statistics command-log-mode column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
