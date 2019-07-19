@@ -14,6 +14,9 @@ fi
 EDITOR=$VISUAL
 export VISUAL EDITOR
 
+GPG_TTY=$(tty)
+export GPG_TTY
+
 mesg n
 
 function ss() { ssh -X -t $1 "tmux attach || tmux || screen -xR || bash -l"; }
