@@ -3,7 +3,10 @@ set -o vi
 PS1="\u@\h:\w\n\$ "
 export PS1
 
-PATH="$HOME/bin:$HOME/.npm-global/bin:$PATH"
+GOLANG=$HOME/go
+export GOLANG PATH
+
+PATH="$HOME/bin:$HOME/.npm-global/bin:$GOLANG/bin:$PATH"
 export PATH
 
 if [ -x $HOME/bin/ec ]; then
