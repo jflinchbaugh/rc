@@ -1,0 +1,7 @@
+#!/bin/sh
+
+BRANCH=$(git branch -a | sed 's!remotes/origin/!!' | sort | uniq | fzf)
+
+if [ "x$BRANCH" != "x" ]; then
+    git checkout $BRANCH
+fi
