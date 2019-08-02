@@ -492,6 +492,10 @@ before packages are loaded."
   (spacemacs/toggle-highlight-current-line-globally-off)
 
   (setq git-commit-summary-max-length 40)
+  (setq c-basic-offset 2)
+  (setq tab-width 2)
+  (setq tab-always-indent t)
+  (setq indent-tabs-mode nil)
   (setq clojure-indent-style 'always-indent)
   (setq command-log-mode-open-log-turns-on-mode t)
   (setq command-log-mode-is-global t)
@@ -500,7 +504,6 @@ before packages are loaded."
   (setq org-tags-column 0)
   (setq org-default-notes-file "~/OrgMode/GTD.org")
   (setq vc-follow-symlinks t)
-
   ;; use the system clipboard
   (setq x-select-enable-clipboard t)
   (setq org-capture-templates
@@ -558,7 +561,7 @@ This function is called at the very end of Spacemacs initialization."
  '(package-selected-packages
    (quote
     (sqlup-mode sql-indent company-emacs-eclim eclim vimrc-mode dactyl-mode yasnippet-snippets yaml-mode ws-butler winum which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org spaceline smeargle restart-emacs rainbow-delimiters popwin persp-mode pcre2el paradox orgit org-present org-pomodoro org-mime org-download org-bullets open-junk-file neotree mwim move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode linum-relative link-hint json-mode js2-refactor js-doc indent-guide hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-rg helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu elisp-slime-nav dumb-jump diminish diff-hl define-word csv-mode company-tern company-statistics command-log-mode column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
- '(standard-indent 2))
+  )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
