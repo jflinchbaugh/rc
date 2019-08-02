@@ -509,24 +509,18 @@ before packages are loaded."
            "* NEW %?\n  %i\n  %a"))
         )
 
-  (with-eval-after-load 'cider
-    (setq cider-repl-pop-to-buffer-on-connect t)
+  (setq cider-repl-pop-to-buffer-on-connect t)
 
-    ;; key to eval to comment in cider
-    (spacemacs/set-leader-keys (kbd "mec")
-      'cider-pprint-eval-last-sexp-to-comment)
-    (define-key evil-normal-state-map (kbd ",ec")
-      'cider-pprint-eval-last-sexp-to-comment)
+  ;; key to eval to comment in cider: ,ec
+  (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "ec"
+    'cider-pprint-eval-last-sexp-to-comment)
 
-    ;; key to interrupt cider
-    (spacemacs/set-leader-keys (kbd "mi")
-      'cider-pprint-eval-last-sexp-to-comment)
-    (define-key evil-normal-state-map (kbd ",i")
-      'cider-interrupt)
-    )
+  ;; key to eval sexp to point: ,ex
+  (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "ex"
+    'cider-eval-sexp-up-to-point)
 
   ;; key to open command log buffer
-  (spacemacs/set-leader-keys (kbd "bl") 'clm/toggle-command-log-buffer)
+  (spacemacs/set-leader-keys "bl" 'clm/toggle-command-log-buffer)
 
   ;; :q should kill the current buffer rather than quitting emacs entirely
   ;; (evil-ex-define-cmd "q" 'kill-this-buffer)
