@@ -489,6 +489,7 @@ before packages are loaded."
 
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-highlight-long-lines-globally-on)
+  (spacemacs/toggle-fill-column-indicator-on)
   (spacemacs/toggle-highlight-current-line-globally-off)
 
   (setq git-commit-summary-max-length 40)
