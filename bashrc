@@ -33,6 +33,11 @@ alias g=git
 alias gs='git status'
 alias d=docker
 
+alias m=mvn
+alias mc='mvn clean'
+alias misft='mvn install -D skip-functional-tests'
+
+
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
     . "$HOME/.bashrc_local"
