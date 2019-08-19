@@ -35,7 +35,7 @@ alias d=docker
 
 alias m=mvn
 alias mc='mvn clean'
-alias misft='mvn install -D skip-functional-tests'
+alias misft='mvn install -D skip-functional-test'
 
 
 # source in local changes that aren't shared
