@@ -13,6 +13,8 @@
     co = checkout
     b = branch
     undo = reset --soft HEAD~1
+[pull]
+    rebase = true
 [push]
     default = simple
     followTags = true
