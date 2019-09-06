@@ -8,7 +8,8 @@
     ffc = flow feature checkout
     graph = log --branches --tags --remotes \
             --graph --notes --source --abbrev-commit \
-            --decorate=full --stat --show-signature
+            --decorate=full --stat --show-signature \
+            --first-parent
     p = pull
     co = checkout
     b = branch
