@@ -498,6 +498,7 @@ before packages are loaded."
   (setq tab-always-indent t)
   (setq indent-tabs-mode nil)
   (setq clojure-indent-style 'always-indent)
+  (setq groovy-indent-offset 2)
   (setq command-log-mode-open-log-turns-on-mode t)
   (setq command-log-mode-is-global t)
   (setq org-todo-keywords
