@@ -222,7 +222,7 @@ It should only modify the values of Spacemacs settings."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Ubuntu Mono"
-                               :size 18
+                               :size 16
                                :weight normal
                                :width normal)
 
@@ -471,7 +471,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; override fonts for mac
   (if (eq system-type 'darwin)
       (setq-default dotspacemacs-default-font '("Monaco"
-                                                :size 12
+                                                :size 10
                                                 :weight normal
                                                 :width normal)))
   )
@@ -502,6 +502,8 @@ before packages are loaded."
   (setq indent-tabs-mode nil)
   (setq clojure-indent-style 'always-indent)
   (setq groovy-indent-offset 2)
+  (electric-indent-mode 0)
+  (setq indent-line-function 'indent-relative)
   (setq command-log-mode-open-log-turns-on-mode t)
   (setq command-log-mode-is-global t)
   (setq org-todo-keywords
