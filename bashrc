@@ -9,6 +9,9 @@ export GOPATH
 PATH="$HOME/bin:$HOME/.npm-global/bin:$GOPATH/bin:$PATH"
 export PATH
 
+HISTSIZE=5000
+export HISTSIZE
+
 if [ -x $HOME/bin/ec ]; then
     VISUAL=$HOME/bin/ec
 else
