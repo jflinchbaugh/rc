@@ -465,7 +465,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; override fonts for mac
   (if (eq system-type 'darwin)
-      (setq-default dotspacemacs-default-font '("Monaco"
+      (setq-default dotspacemacs-default-font '("JetBrains Mono"
                                                 :size 10
                                                 :weight normal
                                                 :width normal)))
