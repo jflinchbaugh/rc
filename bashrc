@@ -40,6 +40,7 @@ alias m=mvn
 alias mc='mvn clean'
 alias misft='mvn install -D skip-functional-test'
 
+alias light='GTK_THEME=adwaita'
 
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
