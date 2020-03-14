@@ -68,7 +68,6 @@ This function should only modify configuration layer settings."
      treemacs
      version-control
      ripgrep)
-     
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -517,6 +516,8 @@ before packages are loaded."
         )
 
   (setq cider-repl-pop-to-buffer-on-connect t)
+
+  (setq-default evil-ex-search-highlight-all nil)
 
   ;; key to eval to comment in cider: ,ec
   (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "ec"
