@@ -514,6 +514,9 @@ before packages are loaded."
   (setq groovy-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
 
+  (setq js-indent-level 2)
+  (setq typescript-indent-level 2)
+
   (electric-indent-mode 0)
   (setq indent-line-function 'indent-relative)
   (setq command-log-mode-open-log-turns-on-mode t)
