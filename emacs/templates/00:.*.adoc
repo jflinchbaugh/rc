@@ -1,0 +1,7 @@
+title=A Title
+date=2020-03-16
+type=post
+status=draft/published
+tags=3D-Printing, Amazon, Android, BMW-i3, Blog, Blog-Code, Books, Chili, Clojure, Code, Computers, Cooking, Entertainment, Family, Food, Friends, Gallery, Games, Google, Groovy, Hardware, History, Home, Humor, Java, Linux, Mac, Make365, Miscellaneous, Mobile, Music, Octoprint, Photo, Photography, Podcasts, Polarity Politics, Recipe, Technology, Testing, Toys, Video, Web, Web-Dev, Work
+~~~~~~
+https://example.com/[example link]

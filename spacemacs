@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
      ;; parinfer
      helm
      auto-completion
+     templates
      better-defaults
      emacs-lisp
      git
@@ -503,6 +504,8 @@ before packages are loaded."
   (spacemacs/toggle-highlight-long-lines-globally-on)
   (spacemacs/toggle-fill-column-indicator-on)
   (spacemacs/toggle-highlight-current-line-globally-off)
+
+  (yas-global-mode)
 
   (setq git-commit-summary-max-length 40)
   (setq c-basic-offset 2)
