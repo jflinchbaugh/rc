@@ -54,7 +54,7 @@ This function should only modify configuration layer settings."
      ;; parinfer
      helm
      auto-completion
-     templates
+     (templates :variables templates-private-directory "~/.spacemacs.d/templates")
      better-defaults
      emacs-lisp
      git
