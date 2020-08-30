@@ -1,7 +1,17 @@
-title=A Title
-date=2020-03-16
+title=${1:$$(replace-regexp-in-string "_" " " (file-name-nondirectory (file-name-sans-extension(buffer-file-name))))}
+date=${2:$$(format-time-string "%Y-%m-%e")}
 type=post
-status=draft/published
+status=${3:$$(yas-choose-value '("published" "draft"))}
 tags=3D-Printing, Amazon, Android, BMW-i3, Blog, Blog-Code, Books, Chili, Clojure, Code, Computers, Cooking, Entertainment, Family, Food, Friends, Gallery, Games, Google, Groovy, Hardware, History, Home, Humor, Java, Linux, Mac, Make365, Miscellaneous, Mobile, Music, Octoprint, Photo, Photography, Podcasts, Polarity Politics, Recipe, Technology, Testing, Toys, Video, Web, Web-Dev, Work
 ~~~~~~
+$0
+=== A header
+
 https://example.com/[example link]
+
+image:{site_context}images/2020/lock-puzzle.png[Lock Puzzle,300,role="right"]
+
+----
+code block
+----
+
