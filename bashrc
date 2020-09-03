@@ -25,7 +25,7 @@ export GPG_TTY
 
 mesg n
 
-function ss() { ssh -X -t $1 "tmux attach || tmux || screen -xR || bash -l"; }
+ss() { ssh -X -t $1 "tmux attach || tmux || screen -xR || bash -l"; }
 
 if [ "$(uname)" = 'Linux' ]; then
     alias open=exo-open
@@ -38,7 +38,7 @@ alias d=docker
 
 alias m=mvn
 alias mc='mvn clean'
-alias misft='mvn install -D skip-functional-test'
+alias misft='mvn install -Dskip-functional-test'
 
 alias light='GTK_THEME=adwaita'
 
