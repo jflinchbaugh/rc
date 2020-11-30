@@ -27,3 +27,5 @@
 [user]
     name = John Flinchbaugh
     email = john@hjsoft.com
+[init]
+	defaultBranch = main
