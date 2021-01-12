@@ -597,11 +597,9 @@ This function is called at the very end of Spacemacs initialization."
    (quote
     ((cider-shadow-cljs-default-options . "app")
      (typescript-backend . tide)
-     (typescript-backend . lsp)
      (javascript-backend . tern)
-     (javascript-backend . lsp)
-     (go-backend . go-mode)
-     (go-backend . lsp)))))
+     (go-backend . go-mode)))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
