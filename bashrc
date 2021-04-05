@@ -42,6 +42,8 @@ alias misft='mvn install -Dskip-functional-test'
 
 alias light='GTK_THEME=adwaita'
 
+alias k=kubectl
+
 # source in local changes that aren't shared
 if [ -f "$HOME/.bashrc_local" ]; then
     . "$HOME/.bashrc_local"
