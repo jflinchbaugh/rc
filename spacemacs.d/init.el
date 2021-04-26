@@ -592,6 +592,8 @@ before packages are loaded."
   ;; :q should kill the current buffer rather than quitting emacs entirely
   ;; (evil-ex-define-cmd "q" 'kill-this-buffer)
 
+  ;; Set escape keybinding to "JK"
+  (setq-default evil-escape-key-sequence "jk")
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
