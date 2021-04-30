@@ -574,7 +574,8 @@ before packages are loaded."
            "* NEW %?\n  %i\n  %a"))
         )
 
-  (setq cider-repl-pop-to-buffer-on-connect t)
+  (setq cider-repl-pop-to-buffer-on-connect 'display-only)
+  (setq cider-repl-buffer-size-limit 100000)
 
   (setq-default evil-ex-search-highlight-all nil)
 
