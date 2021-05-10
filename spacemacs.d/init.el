@@ -54,12 +54,11 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; parinfer
      ivy
-     auto-completion
+     ;; auto-completion
      (templates :variables templates-private-directory "~/.spacemacs.d/templates")
      better-defaults
      emacs-lisp
      git
-     ;; markdown
      multiple-cursors
      org
      ;; (shell :variables
