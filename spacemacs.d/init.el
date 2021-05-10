@@ -595,6 +595,10 @@ before packages are loaded."
 
   ;; Set escape keybinding to "JK"
   (setq-default evil-escape-key-sequence "jk")
+
+  ;; fix intermittent line number shifting
+  (setq display-line-numbers-grow-only t)
+
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
