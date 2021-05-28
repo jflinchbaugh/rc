@@ -60,7 +60,8 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      multiple-cursors
-     org
+     (org :variables
+          org-enable-reveal-js-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -597,6 +598,8 @@ before packages are loaded."
 
   ;; fix intermittent line number shifting
   (setq display-line-numbers-grow-only t)
+
+  (setq org-export-backends '(ascii html icalendar latex odt confluence md))
 
   )
 (defun dotspacemacs/emacs-custom-settings ()
