@@ -1,5 +1,8 @@
 set -o vi
 
+# show command expansions
+set -x
+
 PS1="\u@\h:\w\n\$ "
 export PS1
 
