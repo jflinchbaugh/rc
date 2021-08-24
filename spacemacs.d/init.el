@@ -536,7 +536,9 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-home-shorten-agenda-source nil
 
    ;; If non-nil then byte-compile some of Spacemacs files.
-   dotspacemacs-byte-compile nil))
+   dotspacemacs-byte-compile nil
+
+   org-roam-v2-ack t))
 
 (defun dotspacemacs/user-env ()
   "Environment variables setup.
@@ -637,6 +639,7 @@ before packages are loaded."
   (setq display-line-numbers-grow-only t)
 
   (setq org-export-backends '(ascii html icalendar latex odt confluence md))
+  (setq org-roam-directory "~/org-roam")
 
   )
 (defun dotspacemacs/emacs-custom-settings ()
