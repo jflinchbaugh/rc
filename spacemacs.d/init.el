@@ -72,7 +72,8 @@ This function should only modify configuration layer settings."
      git
      multiple-cursors
      (org :variables
-          org-enable-reveal-js-support t)
+          org-enable-reveal-js-support t
+          org-enable-roam-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
