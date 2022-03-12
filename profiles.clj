@@ -5,6 +5,6 @@
             [lein-ancient "0.7.0"]
             [lein-kibit "0.1.8"]
             [com.jakemccrary/lein-test-refresh "0.25.0"]
-            [lein-nvd "1.5.0"]
-            [com.livingsocial/lein-dependency-check "1.1.5"]]
+            [lein-nvd "2.0.0"]
+            [com.livingsocial/lein-dependency-check "1.3.0"]]
   :jvm-opts ^:replace []}}
