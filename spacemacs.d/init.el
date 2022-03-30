@@ -671,11 +671,12 @@ This function is called at the very end of Spacemacs initialization."
    '((cider-shadow-cljs-default-options . "app")
      (typescript-backend . tide)
      (javascript-backend . tern)
-     (go-backend . go-mode))))
+     (go-backend . go-mode)))
+ '(undo-tree-auto-save-history nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t))
 )
