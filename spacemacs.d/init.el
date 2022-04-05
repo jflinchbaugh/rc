@@ -573,6 +573,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
                                                 :size 12.0
                                                 :weight normal
                                                 :width normal)))
+  (setq-default git-magit-status-fullscreen t)
   )
 
 (defun dotspacemacs/user-load ()
