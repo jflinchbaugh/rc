@@ -570,7 +570,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; override fonts for mac
   (if (eq system-type 'darwin)
       (setq-default dotspacemacs-default-font '("JetBrains Mono"
-                                                :size 12.0
+                                                :size 14.0
                                                 :weight normal
                                                 :width normal)))
   (setq-default git-magit-status-fullscreen t)
