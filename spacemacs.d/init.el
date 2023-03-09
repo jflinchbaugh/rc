@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
      groovy
      markdown
      csv
-     lsp
+     ;;lsp
      (clojure :variables clojure-enable-clj-refactor t)
      ;; vimscript
      ;; ----------------------------------------------------------------
