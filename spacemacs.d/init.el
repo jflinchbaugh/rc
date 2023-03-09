@@ -612,7 +612,8 @@ before packages are loaded."
   (spacemacs/toggle-highlight-current-line-globally-off)
 
   (yas-global-mode)
-
+  
+  (setq evil-ex-search-case 'sensitive)
   (setq git-commit-summary-max-length 40)
   (setq c-basic-offset 2)
   (setq tab-width 2)
