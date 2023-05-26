@@ -631,7 +631,7 @@ before packages are loaded."
   (setq command-log-mode-open-log-turns-on-mode t)
   (setq command-log-mode-is-global t)
   (setq org-todo-keywords
-        '((sequence "NEW" "TODO" "NEXT" "WAIT" "|" "DONE" "ABANDONED")))
+        '((sequence "NEW" "TODO" "NEXT" "ACTIVE" "WAIT" "|" "DONE" "ABANDONED")))
   (setq org-tags-column 0)
   (setq org-default-notes-file "~/OrgMode/GTD.org")
   (setq vc-follow-symlinks t)
