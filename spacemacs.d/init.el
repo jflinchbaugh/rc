@@ -91,7 +91,7 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(command-log-mode)
+   dotspacemacs-additional-packages '(command-log-mode org)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
 
@@ -610,7 +610,7 @@ before packages are loaded."
   (spacemacs/toggle-highlight-current-line-globally-off)
 
   (yas-global-mode)
-  
+
   (setq evil-ex-search-case 'sensitive)
   (setq git-commit-summary-max-length 40)
   (setq c-basic-offset 2)
