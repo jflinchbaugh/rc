@@ -7,5 +7,5 @@
             [com.jakemccrary/lein-test-refresh "0.25.0"]
             [lein-nvd "2.0.0"]
             [com.github.liquidz/antq "RELEASE"]
-            [com.livingsocial/lein-dependency-check "1.4.0"]]
+            [com.livingsocial/lein-dependency-check "1.4.1"]]
   :jvm-opts ^:replace []}}
