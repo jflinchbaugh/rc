@@ -44,11 +44,6 @@ alias light='GTK_THEME=adwaita'
 
 alias k=kubectl
 
-# source in local changes that aren't shared
-if [ -f "$HOME/.bashrc_local" ]; then
-    . "$HOME/.bashrc_local"
-fi
-
 cat << END
          1         2         3         4         5         6         7         8
 12345678901234567890123456789012345678901234567890123456789012345678901234567890
