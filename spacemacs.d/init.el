@@ -588,6 +588,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
                                                 :weight normal
                                                 :width normal)))
   (setq-default git-magit-status-fullscreen t)
+  (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
   )
 
 (defun dotspacemacs/user-load ()
