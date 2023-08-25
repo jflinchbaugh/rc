@@ -608,8 +608,8 @@ before packages are loaded."
 
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-highlight-long-lines-globally-on)
-  (spacemacs/toggle-fill-column-indicator-on)
   (spacemacs/toggle-highlight-current-line-globally-off)
+  (global-display-fill-column-indicator-mode)
 
   (yas-global-mode)
 
