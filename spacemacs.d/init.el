@@ -675,6 +675,8 @@ before packages are loaded."
 
   (org-roam-db-autosync-mode t)
 
+  (setq helm-ag-use-grep-ignore-list nil)
+
   )
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
