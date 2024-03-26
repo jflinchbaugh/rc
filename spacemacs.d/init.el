@@ -76,7 +76,8 @@ This function should only modify configuration layer settings."
      ;; multiple-cursors
      (org :variables
           org-enable-reveal-js-support t
-          org-enable-roam-support t)
+          org-enable-roam-support t
+          org-enable-hugo-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
