@@ -23,8 +23,6 @@ export VISUAL EDITOR
 GPG_TTY=$(tty)
 export GPG_TTY
 
-mesg n
-
 ss() { ssh -X -t $@ "tmux attach || tmux || screen -xR || bash -l"; }
 
 if [ "$(uname)" = 'Linux' ]; then
