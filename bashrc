@@ -23,7 +23,7 @@ export VISUAL EDITOR
 GPG_TTY=$(tty)
 export GPG_TTY
 
-ss() { ssh -X -t $@ "tmux attach || tmux || screen -xR || bash -l"; }
+st() { ssh -X -t $@ "tmux attach || tmux || screen -xR || bash -l"; }
 
 if [ "$(uname)" = 'Linux' ]; then
     alias open=exo-open
