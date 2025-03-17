@@ -77,6 +77,8 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-reveal-js-support t
           org-enable-roam-support t
+          org-enable-roam-protocol t
+          org-enable-roam-ui t
           org-enable-hugo-support t)
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -564,7 +566,7 @@ It should only modify the values of Spacemacs settings."
    ;; indent handling like has been reported for `go-mode'.
    ;; If it does deactivate it here.
    ;; (default t)
-   dotspacemacs-use-clean-aindent-mode t
+   dotspacemacs-use-clean-aindent-mode nil
 
    ;; Accept SPC as y for prompts if non-nil. (default nil)
    dotspacemacs-use-SPC-as-y nil
@@ -686,13 +688,18 @@ before packages are loaded."
   (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "ex"
     'cider-eval-sexp-up-to-point)
 
+  ;; add an org id to create a node in a org file
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "rI"
+    'org-id-get-create)
+
   ;; key to open command log buffer
   (spacemacs/set-leader-keys "bl" 'clm/toggle-command-log-buffer)
 
   ;; :q should kill the current buffer rather than quitting emacs entirely
   ;; (evil-ex-define-cmd "q" 'kill-this-buffer)
 
-  ;; Set escape keybinding to "JK"
+
+  ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
 
   ;; fix intermittent line number shifting
