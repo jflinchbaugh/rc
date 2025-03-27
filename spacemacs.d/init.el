@@ -712,7 +712,7 @@ before packages are loaded."
   (setq org-export-backends '(ascii html icalendar latex odt confluence md))
   (setq org-roam-directory "~/org-roam")
 
-  (org-roam-db-autosync-mode t)
+  (org-roam-db-autosync-mode)
 
   (setq helm-ag-use-grep-ignore-list nil)
 
