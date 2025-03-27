@@ -692,6 +692,10 @@ before packages are loaded."
   (spacemacs/set-leader-keys-for-major-mode 'org-mode "rI"
     'org-id-get-create)
 
+  ;; add an org id to create a node in a org file
+  (spacemacs/set-leader-keys "aors" 'org-roam-db-sync)
+  (spacemacs/set-leader-keys-for-major-mode 'org-mode "rs" 'org-id-get-create)
+
   ;; key to open command log buffer
   (spacemacs/set-leader-keys "bl" 'clm/toggle-command-log-buffer)
 
