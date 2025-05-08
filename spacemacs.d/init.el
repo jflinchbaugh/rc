@@ -722,27 +722,74 @@ before packages are loaded."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-  (custom-set-variables
-   ;; custom-set-variables was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(evil-want-Y-yank-to-eol nil)
-   '(package-selected-packages
-     '(lsp-docker rustic xterm-color protobuf-mode code-cells helm-cscope helm-pydoc eldoc load-env-vars pydoc pylookup xcscope systemd journalctl-mode orgnav org-view-mode toml-mode ron-mode racer rust-mode helm-gtags flycheck-rust counsel swiper ivy cargo yapfify stickyfunc-enhance sphinx-doc pytest pyenv-mode py-isort poetry pippel pipenv pyvenv pip-requirements lsp-python-ms lsp-pyright live-py-mode importmagic epc ctable concurrent deferred ggtags dap-mode lsp-treemacs bui lsp-mode cfrs posframe cython-mode counsel-gtags company-anaconda blacken anaconda-mode pythonic yatemplate yasnippet-snippets yaml-mode ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify volatile-highlights vimrc-mode vi-tilde-fringe uuidgen use-package unfill undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil org-mode toc-org tide tagedit symon symbol-overlay string-inflection string-edit sql-indent spaceline-all-the-icons smex smeargle slim-mode scss-mode sass-mode restart-emacs request rainbow-delimiters pug-mode prettier-js popwin pcre2el password-generator paradox overseer orgit org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file npm-mode nodejs-repl nameless mwim mvn multi-line move-text mmm-mode meghanada maven-test-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lorem-ipsum livid-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation groovy-mode groovy-imports google-translate golden-ratio godoctor go-tag go-rename go-impl go-guru go-gen-test go-fill-struct go-eldoc gnuplot gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ gh-md fuzzy forge font-lock+ flyspell-correct-ivy flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu emr emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode dired-quick-sort diminish devdocs define-word dactyl-mode csv-mode counsel-projectile counsel-css company-web company-go command-log-mode column-enforce-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu centered-cursor-mode browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adoc-mode ace-link ac-ispell))
-   '(safe-local-variable-values
-     '((cider-shadow-cljs-default-options . "app")
-       (typescript-backend . tide)
-       (javascript-backend . tern)
-       (go-backend . go-mode)))
-   '(undo-tree-auto-save-history nil))
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t))
-  )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-want-Y-yank-to-eol nil)
+ '(org-agenda-files '("~/org-roam/20240402211116-srcc_2024_04_02.org"))
+ '(package-selected-packages
+   '(lsp-docker rustic xterm-color protobuf-mode code-cells helm-cscope helm-pydoc
+                eldoc load-env-vars pydoc pylookup xcscope systemd
+                journalctl-mode orgnav org-view-mode toml-mode ron-mode racer
+                rust-mode helm-gtags flycheck-rust counsel swiper ivy cargo
+                yapfify stickyfunc-enhance sphinx-doc pytest pyenv-mode py-isort
+                poetry pippel pipenv pyvenv pip-requirements lsp-python-ms
+                lsp-pyright live-py-mode importmagic epc ctable concurrent
+                deferred ggtags dap-mode lsp-treemacs bui lsp-mode cfrs posframe
+                cython-mode counsel-gtags company-anaconda blacken anaconda-mode
+                pythonic yatemplate yasnippet-snippets yaml-mode ws-butler
+                writeroom-mode winum which-key wgrep web-mode web-beautify
+                volatile-highlights vimrc-mode vi-tilde-fringe uuidgen
+                use-package unfill undo-tree treemacs-projectile treemacs-persp
+                treemacs-magit treemacs-icons-dired treemacs-evil org-mode
+                toc-org tide tagedit symon symbol-overlay string-inflection
+                string-edit sql-indent spaceline-all-the-icons smex smeargle
+                slim-mode scss-mode sass-mode restart-emacs request
+                rainbow-delimiters pug-mode prettier-js popwin pcre2el
+                password-generator paradox overseer orgit org-superstar
+                org-rich-yank org-projectile org-present org-pomodoro org-mime
+                org-download org-cliplink org-brain open-junk-file npm-mode
+                nodejs-repl nameless mwim mvn multi-line move-text mmm-mode
+                meghanada maven-test-mode markdown-toc magit-svn magit-section
+                magit-gitflow macrostep lorem-ipsum livid-mode link-hint
+                json-navigator json-mode js2-refactor js-doc ivy-yasnippet
+                ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide
+                impatient-mode hybrid-mode hungry-delete hl-todo
+                highlight-parentheses highlight-numbers highlight-indentation
+                groovy-mode groovy-imports google-translate golden-ratio
+                godoctor go-tag go-rename go-impl go-guru go-gen-test
+                go-fill-struct go-eldoc gnuplot gitignore-templates
+                gitignore-mode gitconfig-mode gitattributes-mode git-timemachine
+                git-messenger git-link git-gutter-fringe+ gh-md fuzzy forge
+                font-lock+ flyspell-correct-ivy flycheck-pos-tip
+                flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse
+                expand-region evil-visualstar evil-visual-mark-mode
+                evil-unimpaired evil-tutor evil-textobj-line evil-surround
+                evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit
+                evil-lisp-state evil-lion evil-indent-plus evil-iedit-state
+                evil-goggles evil-exchange evil-escape evil-ediff
+                evil-easymotion evil-collection evil-cleverparens evil-args
+                evil-anzu emr emmet-mode elisp-slime-nav editorconfig dumb-jump
+                dotenv-mode dired-quick-sort diminish devdocs define-word
+                dactyl-mode csv-mode counsel-projectile counsel-css company-web
+                company-go command-log-mode column-enforce-mode clojure-snippets
+                clj-refactor clean-aindent-mode cider-eval-sexp-fu
+                centered-cursor-mode browse-at-remote auto-yasnippet
+                auto-highlight-symbol auto-dictionary auto-compile
+                aggressive-indent adoc-mode ace-link ac-ispell))
+ '(safe-local-variable-values
+   '((cider-shadow-cljs-default-options . "app") (typescript-backend . tide)
+     (javascript-backend . tern) (go-backend . go-mode)))
+ '(undo-tree-auto-save-history nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t))
+)
 
 
 ;; Do not write anything past this comment. This is where Emacs will
