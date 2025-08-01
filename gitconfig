@@ -6,6 +6,9 @@
     fff = flow feature finish
     ffp = flow feature publish
     ffc = flow feature checkout
+    wt = worktree
+    wtl = worktree list
+    wta = worktree add
     graph = log --branches --tags --remotes \
             --graph --notes --source --abbrev-commit \
             --decorate=full --stat --show-signature \
