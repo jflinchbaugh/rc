@@ -3,6 +3,9 @@ set -o vi
 PS1="\u@\h:\w\n\$ "
 export PS1
 
+GEMINI_MODEL="gemini-2.5-flash"
+export GEMINI_MODEL
+
 GOPATH=$HOME/go
 export GOPATH
 
