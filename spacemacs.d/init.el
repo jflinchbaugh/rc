@@ -664,6 +664,7 @@ before packages are loaded."
 
   (setq cider-repl-pop-to-buffer-on-connect 'display-only)
   (setq cider-repl-buffer-size-limit 100000)
+  (setq cider-clojure-cli-global-aliases ":dev")
 
   (setq-default evil-ex-search-highlight-all nil)
 
