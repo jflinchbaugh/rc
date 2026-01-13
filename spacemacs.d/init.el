@@ -623,6 +623,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (add-to-list 'load-path "~/.spacemacs.d/")
+  (require 'clay)
 
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-highlight-long-lines-globally-on)
@@ -707,6 +709,7 @@ before packages are loaded."
   (setq tab-always-indent 'complete)
 
   )
+
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
 This is an auto-generated function, do not modify its content directly, use
@@ -781,16 +784,16 @@ This function is called at the very end of Spacemacs initialization."
    '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t))
   )
 
-(defun clay-make ()
-  (interactive)
-  (when-let
-      ((filename
-        (buffer-file-name)))
-    (save-buffer)
-    (cider-interactive-eval
-     (concat "(do (require '[scicloj.clay.v2.snippets])
-                  (scicloj.clay.v2.snippets/make-ns-html!
-                    \"" filename "\" {}))"))))
+;;(defun clay-make ()
+;;(interactive)
+;;(when-let
+;;((filename
+;;(buffer-file-name)))
+;;(save-buffer)
+;;(cider-interactive-eval
+;;(concat "(do (require '[scicloj.clay.v2.snippets])
+;;(scicloj.clay.v2.snippets/make-ns-html!
+;;\"" filename "\" {}))"))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
