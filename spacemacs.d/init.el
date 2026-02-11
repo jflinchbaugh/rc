@@ -725,55 +725,55 @@ This function is called at the very end of Spacemacs initialization."
    '(evil-want-Y-yank-to-eol nil)
    '(org-agenda-files '("~/org-roam/20240402211116-srcc_2024_04_02.org"))
    '(package-selected-packages
-     '(lsp-docker rustic xterm-color protobuf-mode code-cells helm-cscope helm-pydoc
-                  eldoc load-env-vars pydoc pylookup xcscope systemd
-                  journalctl-mode orgnav org-view-mode toml-mode ron-mode racer
-                  rust-mode helm-gtags flycheck-rust counsel swiper ivy cargo
-                  yapfify stickyfunc-enhance sphinx-doc pytest pyenv-mode py-isort
-                  poetry pippel pipenv pyvenv pip-requirements lsp-python-ms
-                  lsp-pyright live-py-mode importmagic epc ctable concurrent
-                  deferred ggtags dap-mode lsp-treemacs bui lsp-mode cfrs posframe
-                  cython-mode counsel-gtags company-anaconda blacken anaconda-mode
-                  pythonic yatemplate yasnippet-snippets yaml-mode ws-butler
-                  writeroom-mode winum which-key wgrep web-mode web-beautify
-                  volatile-highlights vimrc-mode vi-tilde-fringe uuidgen
-                  use-package unfill undo-tree treemacs-projectile treemacs-persp
-                  treemacs-magit treemacs-icons-dired treemacs-evil org-mode
-                  toc-org tide tagedit symon symbol-overlay string-inflection
-                  string-edit sql-indent spaceline-all-the-icons smex smeargle
-                  slim-mode scss-mode sass-mode restart-emacs request
-                  rainbow-delimiters pug-mode prettier-js popwin pcre2el
-                  password-generator paradox overseer orgit org-superstar
-                  org-rich-yank org-projectile org-present org-pomodoro org-mime
-                  org-download org-cliplink org-brain open-junk-file npm-mode
-                  nodejs-repl nameless mwim mvn multi-line move-text mmm-mode
-                  meghanada maven-test-mode markdown-toc magit-svn magit-section
-                  magit-gitflow macrostep lorem-ipsum livid-mode link-hint
-                  json-navigator json-mode js2-refactor js-doc ivy-yasnippet
-                  ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide
-                  impatient-mode hybrid-mode hungry-delete hl-todo
-                  highlight-parentheses highlight-numbers highlight-indentation
-                  groovy-mode groovy-imports google-translate golden-ratio
-                  godoctor go-tag go-rename go-impl go-guru go-gen-test
-                  go-fill-struct go-eldoc gnuplot gitignore-templates
-                  gitignore-mode gitconfig-mode gitattributes-mode git-timemachine
-                  git-messenger git-link git-gutter-fringe+ gh-md fuzzy forge
-                  font-lock+ flyspell-correct-ivy flycheck-pos-tip
-                  flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse
-                  expand-region evil-visualstar evil-visual-mark-mode
-                  evil-unimpaired evil-tutor evil-textobj-line evil-surround
-                  evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit
-                  evil-lisp-state evil-lion evil-indent-plus evil-iedit-state
-                  evil-goggles evil-exchange evil-escape evil-ediff
-                  evil-easymotion evil-collection evil-cleverparens evil-args
-                  evil-anzu emr emmet-mode elisp-slime-nav editorconfig dumb-jump
-                  dotenv-mode dired-quick-sort diminish devdocs define-word
-                  dactyl-mode csv-mode counsel-projectile counsel-css company-web
-                  company-go command-log-mode column-enforce-mode clojure-snippets
-                  clj-refactor clean-aindent-mode cider-eval-sexp-fu
-                  centered-cursor-mode browse-at-remote auto-yasnippet
-                  auto-highlight-symbol auto-dictionary auto-compile
-                  aggressive-indent adoc-mode ace-link ac-ispell))
+     '(ac-ispell ace-link adoc-mode aggressive-indent anaconda-mode auto-compile
+                 auto-dictionary auto-highlight-symbol auto-yasnippet blacken
+                 browse-at-remote bui cargo centered-cursor-mode cfrs
+                 cider-eval-sexp-fu clean-aindent-mode clj-refactor
+                 clojure-snippets code-cells column-enforce-mode command-log-mode
+                 company-anaconda company-go company-web concurrent counsel
+                 counsel-css counsel-gtags counsel-projectile csv-mode ctable
+                 cython-mode dactyl-mode dap-mode deferred define-word devdocs
+                 diminish dired-quick-sort dotenv-mode dumb-jump editorconfig
+                 eldoc elisp-slime-nav emmet-mode emr epc evil-anzu evil-args
+                 evil-cleverparens evil-collection evil-easymotion evil-ediff
+                 evil-escape evil-exchange evil-goggles evil-iedit-state
+                 evil-indent-plus evil-lion evil-lisp-state evil-matchit evil-mc
+                 evil-nerd-commenter evil-numbers evil-org evil-surround
+                 evil-textobj-line evil-tutor evil-unimpaired
+                 evil-visual-mark-mode evil-visualstar expand-region eyebrowse
+                 fancy-battery flx-ido flycheck-elsa flycheck-golangci-lint
+                 flycheck-package flycheck-pos-tip flycheck-rust
+                 flyspell-correct-ivy font-lock+ forge fuzzy ggtags gh-md
+                 git-gutter-fringe+ git-link git-messenger git-timemachine
+                 gitattributes-mode gitconfig-mode gitignore-mode
+                 gitignore-templates gnuplot go-eldoc go-fill-struct go-gen-test
+                 go-guru go-impl go-mode go-rename go-tag godoctor golden-ratio
+                 google-translate groovy-imports groovy-mode helm-cscope
+                 helm-gtags helm-pydoc highlight-indentation highlight-numbers
+                 highlight-parentheses hl-todo hungry-delete hybrid-mode
+                 impatient-mode importmagic indent-guide ivy ivy-avy ivy-hydra
+                 ivy-purpose ivy-xref ivy-yasnippet journalctl-mode js-doc
+                 js2-refactor json-mode json-navigator link-hint live-py-mode
+                 livid-mode load-env-vars lorem-ipsum lsp-docker lsp-mode
+                 lsp-pyright lsp-python-ms lsp-treemacs macrostep magit-gitflow
+                 magit-section magit-svn markdown-toc maven-test-mode meghanada
+                 mmm-mode move-text multi-line mvn mwim nameless nodejs-repl
+                 npm-mode open-junk-file org-brain org-cliplink org-download
+                 org-mime org-mode org-pomodoro org-present org-projectile
+                 org-rich-yank org-superstar org-view-mode orgit orgnav overseer
+                 paradox password-generator pcre2el pip-requirements pipenv pippel
+                 poetry popwin posframe prettier-js protobuf-mode pug-mode
+                 py-isort pydoc pyenv-mode pylookup pytest pythonic pyvenv racer
+                 rainbow-delimiters request restart-emacs ron-mode rust-mode
+                 rustic sass-mode scss-mode slim-mode smeargle smex
+                 spaceline-all-the-icons sphinx-doc sql-indent stickyfunc-enhance
+                 string-edit string-inflection swiper symbol-overlay symon systemd
+                 tagedit tide toc-org toml-mode treemacs-evil treemacs-icons-dired
+                 treemacs-magit treemacs-persp treemacs-projectile undo-tree
+                 unfill use-package uuidgen vi-tilde-fringe vimrc-mode
+                 volatile-highlights web-beautify web-mode wgrep which-key winum
+                 writeroom-mode ws-butler xcscope xterm-color yaml-mode yapfify
+                 yasnippet-snippets yatemplate))
    '(safe-local-variable-values
      '((cider-shadow-cljs-default-options . "app") (typescript-backend . tide)
        (javascript-backend . tern) (go-backend . go-mode)))
