@@ -708,6 +708,7 @@ before packages are loaded."
 
   (setq tab-always-indent 'complete)
 
+  (setq evil-want-fine-undo t)
   )
 
 (defun dotspacemacs/emacs-custom-settings ()
