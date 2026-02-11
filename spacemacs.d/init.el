@@ -693,7 +693,6 @@ before packages are loaded."
   ;; :q should kill the current buffer rather than quitting emacs entirely
   ;; (evil-ex-define-cmd "q" 'kill-this-buffer)
 
-
   ;; Set escape keybinding to "jk"
   (setq-default evil-escape-key-sequence "jk")
 
@@ -709,6 +708,7 @@ before packages are loaded."
 
   (setq tab-always-indent 'complete)
 
+  ;; undo line by line, even in 1 insert
   (setq evil-want-fine-undo t)
   )
 
