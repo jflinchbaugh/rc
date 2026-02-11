@@ -1,4 +1,4 @@
 #!/bin/bash
 
-#emacsclient -a "" -s $HOME/.emacs-text-socket -nw -c "$@"
-emacsclient -a "" -nw -c "$@"
+emacsclient -a "" -s $HOME/.emacs-text-socket -nw -c "$@"
+#emacsclient -a "" -nw -c "$@"
