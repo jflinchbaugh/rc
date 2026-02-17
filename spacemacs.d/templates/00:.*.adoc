@@ -2,9 +2,10 @@ title=${1:$$(replace-regexp-in-string "_" " " (file-name-nondirectory (file-name
 date=${2:$$(format-time-string "%4Y-%02m-%02e")}
 type=post
 status=${3:$$(yas-choose-value '("published" "draft"))}
-tags=3D-Printing, Amazon, Android, BMW-i3, Blog, Blog-Code, Books, Chili, Clojure, Code, Computers, Cooking, Emacs, Entertainment, Family, Food, Friends, Gallery, Games, Google, Groovy, Hardware, History, Home, Humor, Java, Linux, Mac, Make365, Miscellaneous, Mobile, Music, Octoprint, Photo, Photography, Podcasts, Politics, Recipe, Technology, Testing, Toys, Video, Web, Web-Dev, Work
+tags=3D-Printing, Amazon, Android, Blog, Blog-Code, Bolt-EV, Books, Clojure, Code, Computers, Cooking, Emacs, Entertainment, Food, Friends, Games, Google, Hardware, Home, Humor, Java, Linux, Mac, Mobile, Music, Podcasts, Politics, Recipe, Technology, Testing, Toys, Video, Web, Work
 ~~~~~~
 $0
+
 == A header
 
 https://example.com/[example link]
