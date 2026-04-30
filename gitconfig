@@ -9,7 +9,7 @@
     wt = worktree
     wtl = worktree list
     wta = worktree add
-    graph = log --branches --tags --remotes \
+    graph = log --tags --remotes \
             --graph --notes --source --abbrev-commit \
             --decorate=full --stat --show-signature \
             --first-parent
