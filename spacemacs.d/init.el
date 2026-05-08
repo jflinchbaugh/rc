@@ -640,7 +640,7 @@ before packages are loaded."
   (setq tab-width 2)
   (setq tab-always-indent t)
   (setq indent-tabs-mode nil)
-  (setq clojure-indent-style 'always-indent)
+  (setq clojure-indent-style 'community)
 
   (setq groovy-indent-offset 2)
   (setq web-mode-markup-indent-offset 2)
