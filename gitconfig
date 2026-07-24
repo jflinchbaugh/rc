@@ -22,6 +22,8 @@
     rebase = true
 [rebase]
     autoStash = true
+[rerere]
+    enabled = true
 [push]
     default = simple
     followTags = true
