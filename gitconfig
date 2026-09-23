@@ -36,3 +36,6 @@
 	autoSetupRemote = true
 [submodule]
 	recurse = true
+
+[rerere]
+	enabled = true
