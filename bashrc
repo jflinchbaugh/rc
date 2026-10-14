@@ -3,11 +3,10 @@ set -o vi
 PS1="\u@\h:\w\n\$ "
 export PS1
 
-#GEMINI_MODEL="gemini-2.5-flash"
-#export GEMINI_MODEL
-
 GOPATH=$HOME/go
 export GOPATH
+
+export CLAUDE_CODE_DISABLE_MOUSE_CLICKS=1
 
 PATH="$HOME/bin:$HOME/.npm-global/bin:$GOPATH/bin:$PATH"
 export PATH
