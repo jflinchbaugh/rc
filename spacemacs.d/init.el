@@ -263,7 +263,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Fira Code"
-                               :size 8.0
+                               :size 12.0
                                :weight normal
                                :width normal)
 
@@ -605,12 +605,19 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
-  ;; override fonts for mac
-  (if (eq system-type 'darwin)
-      (setq-default dotspacemacs-default-font '("JetBrains Mono"
-                                                :size 14.0
-                                                :weight normal
-                                                :width normal)))
+  ;; override fonts per host
+  (pcase (system-name)
+    ("U-1K"
+     (setq-default dotspacemacs-default-font '("Fira Code"
+                                               :size 8.0
+                                               :weight normal
+                                               :width normal)))
+    ("johns-mac"
+     (setq-default dotspacemacs-default-font '("JetBrains Mono"
+                                               :size 14.0
+                                               :weight normal
+                                               :width normal))))
+
   ;;(setq-default git-magit-status-fullscreen t)
   (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
   )
