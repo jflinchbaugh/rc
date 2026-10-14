@@ -607,7 +607,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; override fonts per host
   (pcase (system-name)
-    ("U-1K"
+    ("U-1KISBB14TKZO9"
      (setq-default dotspacemacs-default-font '("Fira Code"
                                                :size 8.0
                                                :weight normal
